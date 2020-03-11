@@ -218,7 +218,7 @@
   <entry>
     <title>Hello World</title>
     <url>/2020/03/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome ！请记住这个<a href="http://solywsh.github.io">网站</a></p>
+    <content><![CDATA[<p>Welcome ！请记住这个<a href="http://solywsh.github.io" target="_blank" rel="noopener">网站</a></p>
 <p>我在腾讯云那儿买了一个域名，因为我是我新用户，在一定时间类暂时不能在注册局备案，所以blog的域名现在还换不了，但是也请记住！<a href="http://www.voiletwsh.com" target="_blank" rel="noopener">www.voiletwsh.com</a> 不久就会换的。</p>
 <h2 id="关于这个blog"><a href="#关于这个blog" class="headerlink" title="关于这个blog"></a>关于这个blog</h2><h3 id="这个blog的产生"><a href="#这个blog的产生" class="headerlink" title="这个blog的产生"></a>这个blog的产生</h3><p>在这个想法产生的时候，我还在老师的课堂中昏昏欲睡，然后不知不觉的就做出来了。不过中间踩了很多坑就是了，磕磕绊绊地，拖欠了一大堆作业，才有如今这简陋的样子。</p>
 <a id="more"></a>
