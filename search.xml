@@ -8,25 +8,26 @@
 <p>2.梯子，因为会使用谷歌插件，所以会用到梯子。没有的话可以使用其他非谷歌内核浏览器，如火狐浏览器。</p>
 <h2 id="添加Tampermonkey插件"><a href="#添加Tampermonkey插件" class="headerlink" title="添加Tampermonkey插件"></a>添加Tampermonkey插件</h2><p>1.进入<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">Greasy Fork</a>主页，添加一个脚本插件，这里推荐<code>Tampermonkey</code>。操作非常简单，其实进入页面方法已经告诉你了。</p>
 <h3 id="谷歌内核浏览器添加"><a href="#谷歌内核浏览器添加" class="headerlink" title="谷歌内核浏览器添加"></a>谷歌内核浏览器添加</h3><p>进入主页，梯子打开，注意，一定要打开梯子，点击箭头指向的<code>Chrome:Tampermonkey</code></p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/Tampermonkey001.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwxtak0v4j31hc0t4jw8.jpg" alt="img"></p>
 <p>接着点击安装插件，由于我已经安装了，我的显示的是<code>从Chrome中删除</code>。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwxtan7shj31hc0t4adg.jpg" alt="img">****</p>
 <p>安装完之后浏览器右上角有以下图标就说明安装成功了。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/Tampermonkey002.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwxtahdq1j30qn04hjrw.jpg" alt="img"></p>
 <h3 id="火狐浏览器的安装"><a href="#火狐浏览器的安装" class="headerlink" title="火狐浏览器的安装"></a>火狐浏览器的安装</h3><p>和谷歌内核同理，链接我已经提供，点击安装即可，Firefox：<a href="https://addons.mozilla.org/firefox/addon/greasemonkey/" target="_blank" rel="noopener">Greasemonkey</a> </p>
 <h2 id="学习通（超星）脚本的安装"><a href="#学习通（超星）脚本的安装" class="headerlink" title="学习通（超星）脚本的安装"></a>学习通（超星）脚本的安装</h2><p>可以在<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">Greasy Fork</a>的主页直接搜索<code>超星</code>，选择安装量最多的一个就是。</p>
 <p>当然，如果嫌麻烦，直接<a href="[https://greasyfork.org/zh-CN/scripts/369625-%E8%B6%85%E6%98%9F%E7%BD%91%E8%AF%BE%E5%8A%A9%E6%89%8B](https://greasyfork.org/zh-CN/scripts/369625-超星网课助手)">点击</a>我提供的超链接即可跳转。</p>
 <p>然后直接点击安装。这里我已经安装了。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/Tampermonkey004.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwxtard8uj30qv0t3dn0.jpg" alt="img"></p>
 <p>到此，学习通脚本已经安装好了，进入超星网站时浏览器右上角的图标有红色的数字说明已经成功，在你听课时就可以自由移动鼠标了。</p>
 <h2 id="插件进阶设置"><a href="#插件进阶设置" class="headerlink" title="插件进阶设置"></a>插件进阶设置</h2><h3 id="自由开关"><a href="#自由开关" class="headerlink" title="自由开关"></a>自由开关</h3><p>进入超星网站，点击浏览器右上角的插件图标，即可自由开关脚本。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/Tampermonkey005.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwxtajbdnj308e08nq3s.jpg" alt="img"></p>
 <p>当然，进入管理面板还可以对脚本进行删除。</p>
 <h3 id="安装其他脚本"><a href="#安装其他脚本" class="headerlink" title="安装其他脚本"></a>安装其他脚本</h3><p>其他脚本可根据需求在<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">Greasy Fork</a>的主页搜索，比如解除批改网复制粘贴限制，bilibili视频下载等等。大家自由探索，这里不过多说明。（保命）</p>
 <h2 id="脚本的进阶使用（功能介绍）"><a href="#脚本的进阶使用（功能介绍）" class="headerlink" title="脚本的进阶使用（功能介绍）"></a>脚本的进阶使用（功能介绍）</h2><p>其实（学习通）脚本安装完之后就不需要手动操作了，这里算是对超星脚本的功能的说明。</p>
 <p>除了解除鼠标限制之外还有一个功能就是<strong>自动答题</strong>。</p>
 <p>点击一个学科的作业，进入即可自动答题，不需要操作，甚至不需要你点提交。</p>
 <p>这里我已经做完了，只是放出一个效果图。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/Tampermonkey006.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwxtap9dtj30qv0t3wn2.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Plugin</category>
@@ -40,7 +41,7 @@
   <entry>
     <title>如何在电脑用cemu玩塞尔达？</title>
     <url>/2020/03/15/cemu/</url>
-    <content><![CDATA[<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog001.jpg" alt="img"></p>
+    <content><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97e0roj31z4140qhg.jpg" alt="img"></p>
 <h2 id="介绍-violetwsh-com"><a href="#介绍-violetwsh-com" class="headerlink" title="介绍//violetwsh.com"></a>介绍//violetwsh.com</h2><p>自从我卖掉PS4之后我就发誓不再买游戏机——作为学生党我是真的养不起。但是很多独占游戏让我十分羡慕，比如，买塞尔达送switch主机的塞尔达。后来在一次偶然的机会知道了cemu这个willu模拟器，并且之前也听说过，塞尔达最初不是在switch上发售的，但是因为willu上实在卖的太惨，后来才移植到switch上。</p>
 <p>在新冠肺炎爆发之后，我被迫呆在家里，一天脑子抽风了然后入手一个Xbox s的手柄。</p>
 <p>后来我想，Xbox手柄+cemu模拟器+塞尔达=等于正常玩塞尔达。于是去百度贴吧看了一下之后，果真还有，从此打开了新世界的大门，后来也玩到了女神异闻录5（PS3模拟器上）。</p>
@@ -54,14 +55,14 @@
 <p>5.塞尔达游戏本体。<a href="[https://www.oldmanemu.net/%E5%AE%B6%E6%9C%BA%E6%B8%B8%E6%88%8F/wiiu/wiiu%E4%B8%AD%E6%96%87%E6%B8%B8%E6%88%8F%E5%85%A8%E9%9B%86](https://www.oldmanemu.net/家机游戏/wiiu/wiiu中文游戏全集)">老男人游戏网</a>，游侠都可找到，注意是willu版本的就是了。如果实在找不到可以留言。</p>
 <p>6.WUP转loadiine工具。这个是将游戏文件转换为模拟器可读的工具。<a href="https://pan.baidu.com/s/1l59-MGikVJikSO40E_weGQ" target="_blank" rel="noopener">点击提取</a>，提取码：fw12 </p>
 <p>当然，如果你嫌弃麻烦的话，可以用我的，可以省去3，4，5步骤，但是cemu版本比较低，但是亲测可用。（毕竟我都通关了）<a href="https://pan.baidu.com/s/1WJMr5BbrmFgqdeMnZ1P5yw" target="_blank" rel="noopener">点击提取</a>，提取码：e2rt。</p>
-<h2 id="初期设置"><a href="#初期设置" class="headerlink" title="初期设置"></a>初期设置</h2><p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog002.png" alt="img"></p>
+<h2 id="初期设置"><a href="#初期设置" class="headerlink" title="初期设置"></a>初期设置</h2><p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97fw4zj31000lnwer.jpg" alt="img"></p>
 <p>首先打开是这个界面，我们点击菜单栏的<code>Options</code>&gt;&gt;&gt;<code>General settings</code>，可以看到<code>Language</code>选项，将它改为Chinese，直接<code>×</code>掉，点<code>ok</code>，退出重启之后就会发现界面是中文了。</p>
 <p>依次点击菜单栏的<code>CPU</code>&gt;&gt;&gt;<code>模式</code>，然后选择最大核编译。</p>
 <p>依次点击菜单栏的<code>选项</code>&gt;&gt;&gt;<code>GPU缓存精度</code>，根据自己的情况选择质量，这里我选择的事高质量。</p>
 <p>（使用我提供的文件的可以跳过此步骤）依次点击菜单栏的<code>选项</code>&gt;&gt;&gt;<code>常规设定</code>，点击<code>图像</code>，在常规栏下的Graphics API选择OpenGL。</p>
 <p>其他根据自己的情况选择。</p>
 <h3 id="手柄设置"><a href="#手柄设置" class="headerlink" title="手柄设置"></a>手柄设置</h3><p>依次点击菜单栏的<code>选项</code>&gt;&gt;&gt;<code>输入设定</code>。我们会看到一下画面：</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog003.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97un8sj30sg0g4jrl.jpg" alt="img"></p>
 <p>1.配置文件先输入一个名字。</p>
 <p>2.模拟器控制选择Will U Gamepad或者Will U  Pro Controller。</p>
 <p>3.控制器API一栏，Xbox手柄选择Xinput，其他手柄选择Directinput。</p>
@@ -69,52 +70,52 @@
 <p>5.在对应的按键后的方框按下手柄对应的按键。</p>
 <p>以Xbox手柄为例，LB对应L，RB对应R，LT对应ZL，RT对于ZR。“+” “-”键我用的是手柄面板中间两个按键。摇杆的click对应的是手柄摇杆按下。震动建议拉到100%。</p>
 <p>完成后如图：</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog004.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97j3voj30sg0g40te.jpg" alt="img"></p>
 <p>先点击<code>保存</code>，再在配置文件选择配置好的文件点击<code>载入</code>。</p>
 <p>手柄的设置就算是大功告成了。</p>
 <h3 id="文件的转换"><a href="#文件的转换" class="headerlink" title="文件的转换"></a>文件的转换</h3><p>（使用我提供的文件的可以跳过此步骤）</p>
-<p>像是塞尔达这种比较出名的游戏大多下载之后的是不需要转换的，别人是提前转换好了的。下载WUP转loadiine工具解压之后是这个样子的。顾名思义，就是将游戏tik文件拖到<img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog006.png" alt="img"></p>
+<p>像是塞尔达这种比较出名的游戏大多下载之后的是不需要转换的，别人是提前转换好了的。下载WUP转loadiine工具解压之后是这个样子的。顾名思义，就是将游戏tik文件拖到<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97jsaoj303w00lgld.jpg" alt="img"></p>
 <p>转换器就会在游戏目录生成一个<code>code</code>文件，就表示成功了。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog005.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97jsigj30hy0260sm.jpg" alt="img"></p>
 <h3 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h3><p>cemu模拟器在电脑上很多情况下没有得到一个很好的性能。我们需要自己手动设置。</p>
 <p>1.在桌面右键，点击NVIDIA控制面板。</p>
 <p>2.依次点击 <code>3D设置</code>&gt;&gt;&gt;<code>管理3D设置</code>&gt;&gt;&gt;<code>程序设置</code>，界面如图所示</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog007.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97tfimj30r20icgnu.jpg" alt="img"></p>
 <p>我们点击<code>添加(D)</code></p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog008.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97rgo6j30dt0hrwf8.jpg" alt="img"></p>
 <p>点击<code>浏览(B)</code>，之后找到自己cemu安装目录下的<code>Cemu.exe</code>，选中之后点击打开即可。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog009.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97t2k4j30qo0f0gmu.jpg" alt="img"></p>
 <p>回到NVIDIA控制面板，在<code>2.制定该程序的设置值(C)</code>栏设置相应的参数，我的设置如下：</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog010.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog011.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97utr7j30qv0t3mzg.jpg" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97yy90j30fg08et98.jpg" alt="img"></p>
 <p>其实这里最重要的是<code>OpenGL 渲染GPU</code>以及<code>电源管理模式</code>，其他参数都是可有可无。</p>
 <h4 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h4><p>如果后期玩游戏时发现画面有撕裂感的话可以回到这里将<code>垂直同步</code>打开。</p>
 <h2 id="游戏的载入"><a href="#游戏的载入" class="headerlink" title="游戏的载入"></a>游戏的载入</h2><p>准备工作做完之后就可以载入游戏了，在手柄连接的情况下打开cemu，点击菜单栏的<code>文件</code>&gt;&gt;&gt;<code>载入</code>。</p>
 <p>还记得之前转换游戏文件时有一个<code>code</code>文件夹吗，选中<code>code</code>文件夹下的<code>U-King.rpx</code>文件，点击<code>开启</code>，就可以载入了。第一次载入时间较长，之后会快一些。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog012.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx982yuej30qo0f0gmc.jpg" alt="img"></p>
 <p>效果如图</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog013.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx99077wj31000ln4qp.jpg" alt="img"></p>
 <p>然后点击菜单栏的<code>设定</code>&gt;&gt;&gt;<code>全屏</code>就可以开始全屏游戏。</p>
 <p>从此，你也是海拉鲁大陆的一名老流氓了。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog020.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx98peudj31000lnkjl.jpg" alt="img"></p>
 <p>//violetwsh.com</p>
 <h2 id="进阶设定"><a href="#进阶设定" class="headerlink" title="进阶设定"></a>进阶设定</h2><h3 id="图形包"><a href="#图形包" class="headerlink" title="图形包"></a>图形包</h3><p>cemu提供了一些图形包，在菜单栏下的<code>设定</code>&gt;&gt;&gt;<code>图形包</code>（1.17版本是<code>图像插件</code>）里。</p>
 <p>勾选相应的图形包即可，在Cemu 1.13.1版本下我勾选的是（仅供参考）：</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog021.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog022.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx98p1izj30e80grjsk.jpg" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx98t49jj30e7054jrk.jpg" alt="img"></p>
 <p>cemu1.17的图形界面找到塞尔达旷野之息（The Legend of Zelda: Breath of Wild）</p>
 <p>在1.17版本下，具体的图形包设置可以参考这个<a href="https://tieba.baidu.com/p/6172035119?red_tag=1341829710" target="_blank" rel="noopener">帖子</a></p>
 <h3 id="NFC-amiibo-的设定"><a href="#NFC-amiibo-的设定" class="headerlink" title="NFC(amiibo)的设定"></a>NFC(amiibo)的设定</h3><p>任天堂的一些手办带有NFC功能，在游戏中使用amiibo每天可以刷一些东西。</p>
 <p><a href="https://pan.baidu.com/s/1hPlljU22AmY-27kUTE8OEA" target="_blank" rel="noopener">塞尔达NFC文件下载</a> 提取码：ukds</p>
 <p>1.在进入游戏时选择<code>选项</code>，在第一栏的amiibo设定中打开即可。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog023.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx9aaplmj31000ln7is.jpg" alt="img"></p>
 <p>2.在游戏切换道具，使用道具。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog024.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx9c77ywj31000lw1fi.jpg" alt="img"></p>
 <p>3.进入游戏，点击菜单栏的<code>NFC</code>&gt;&gt;&gt;<code>从文件载入NFC标签（Amiibo）</code>,选择一个<code>.bin</code>后缀文件。</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog025.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx9cbcv6j31000lwe81.jpg" alt="img"></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>神庙都没有通关救什么塞尔达公主（狗头），还有，米法天下第一！！！</p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog026.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/solywsh/blogphoto/my/img/blog027.png" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx9dkm8mj31hc0u01ky.jpg" alt="img"></p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx9e3ed1j31hc0u0u0z.jpg" alt="img"></p>
 <p>//violetwsh.com</p>
 ]]></content>
       <categories>
@@ -256,7 +257,7 @@
 <h3 id="错误用法"><a href="#错误用法" class="headerlink" title="错误用法"></a>错误用法</h3><p>由于时间的关系写的很匆忙，出了问题，在写if…else语句的时候需要注意花括号的位置。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (b + c &lt; a)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"不能构成三角形\n"</span>);</span><br><span class="line">	&#123;</span><br><span class="line">	  <span class="keyword">else</span></span><br><span class="line">	  &#123;</span><br><span class="line">	   <span class="built_in">printf</span>(<span class="string">"%.3lf"</span>, S);</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
-<p>注意到了吗？本属于 <a href>printf</a>的花括号被else抢去了。</p>
+<p>注意到了吗？本属于 <a href="">printf</a>的花括号被else抢去了。</p>
 <h2 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h2><p><strong>题目内容：</strong></p>
 <p>有一个函数：</p>
 <p><img src="https://edu-image.nosdn.127.net/4ABFEDE6F4152C0F6E492702B2AD94DE.png?imageView&thumbnail=890x0&quality=100" alt="img"></p>
