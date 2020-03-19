@@ -80,7 +80,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="分享,游戏机,工具,3DS," />
 
 
 
@@ -93,16 +93,33 @@
 
 
 
-<meta name="description" content="偶尔做些奇怪之事">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="https://49.235.42.210/categories/index.html">
+<meta name="description" content="起因故事还得从一只蝙蝠说起，放暑假的时候把(老)3DS带回了家，结果却发现把读卡器带回家，这不要紧，因为有FBI——3DS上的无线安装软件，但是，FBI只是支持cia格式的安装包，且只能安装，不能进行文件的传输。 问题来了，一天，我突然想玩NDS的游戏，而有的NDS数字版游戏不支持在3DS上安装，一个实现的办法是在3DS游戏机上模拟NDS系统，实现套娃的操作——缺点就是耗电。 可是，因为模拟N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3DS如何用FTP传输文件">
+<meta property="og:url" content="https://49.235.42.210/2020/03/19/3DSFTPD/index.html">
 <meta property="og:site_name" content="马猴小站">
-<meta property="og:description" content="偶尔做些奇怪之事">
-<meta property="article:published_time" content="2020-03-05T08:26:24.000Z">
-<meta property="article:modified_time" content="2020-03-18T02:01:17.675Z">
+<meta property="og:description" content="起因故事还得从一只蝙蝠说起，放暑假的时候把(老)3DS带回了家，结果却发现把读卡器带回家，这不要紧，因为有FBI——3DS上的无线安装软件，但是，FBI只是支持cia格式的安装包，且只能安装，不能进行文件的传输。 问题来了，一天，我突然想玩NDS的游戏，而有的NDS数字版游戏不支持在3DS上安装，一个实现的办法是在3DS游戏机上模拟NDS系统，实现套娃的操作——缺点就是耗电。 可是，因为模拟N">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9hgrjf2j30tc0tcwyp.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7o6iigxj33402c07wi.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7wlfqh9j33402c04qq.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz87y4euuj33402c01ky.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8dkk695j30fl0bf0t8.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ia1ub8j30fl0bfwes.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ro4r57j33402c01l0.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8v1vsilj30ia0ast9r.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8w1kjxsj31740pntb2.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ysrjrhj30fu0a5t8y.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz91y7meqj31740pnq6j.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9qa7mvej30tz0tz4cg.jpg">
+<meta property="article:published_time" content="2020-03-19T08:26:42.000Z">
+<meta property="article:modified_time" content="2020-03-19T07:29:12.212Z">
 <meta property="article:author" content="王世浩">
+<meta property="article:tag" content="分享">
+<meta property="article:tag" content="游戏机">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="3DS">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9hgrjf2j30tc0tcwyp.jpg">
 
 
 
@@ -132,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="https://49.235.42.210/categories/"/>
+  <link rel="canonical" href="https://49.235.42.210/2020/03/19/3DSFTPD/"/>
 
 
 
 
 
-  <title>categories | 马猴小站</title>
+  <title>3DS如何用FTP传输文件 | 马猴小站</title>
   
 
 
@@ -318,40 +335,279 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://49.235.42.210/2020/03/19/3DSFTPD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王世浩">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马猴小站">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                目前共计 5 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Plugin/">Plugin</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/games/">games</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/hello/">hello</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/homework/">homework</a><span class="category-list-count">3</span></li></ul>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">3DS如何用FTP传输文件</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-19T16:26:42+08:00">
+                2020-03-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/game/" itemprop="url" rel="index">
+                    <span itemprop="name">game</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/03/19/3DSFTPD/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2020/03/19/3DSFTPD/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9hgrjf2j30tc0tcwyp.jpg"/>
+
+<h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>故事还得从一只蝙蝠说起，放暑假的时候把(老)3DS带回了家，结果却发现把读卡器带回家，这不要紧，因为有<a href="http://nintendo-ds.dcemu.co.uk/-3ds-fbi-v2-5-3-1161570.html" target="_blank" rel="noopener">FBI</a>——3DS上的无线安装软件，但是，FBI只是支持<code>cia</code>格式的安装包，且只能安装，不能进行文件的传输。</p>
+<p>问题来了，一天，我突然想玩NDS的游戏，而有的NDS数字版游戏不支持在3DS上安装，一个实现的办法是在3DS游戏机上模拟NDS系统，实现套娃的操作——缺点就是耗电。</p>
+<p>可是，因为模拟NDS系统不仅仅是安装一个软件那么简单，还需要到系统的根目录进行文件的拷贝修改等等。</p>
+<p>那没有读卡器怎么操作？暂时又出不了门，又买不了。</p>
+<p>原理很简单，在链接网络的情况下让3DS成为FTP（File Transfer Protocol，文件传输协议）<strong>服务器即可</strong>。</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7o6iigxj33402c07wi.jpg"/>
+
+<h1 id="操作环节"><a href="#操作环节" class="headerlink" title="操作环节"></a>操作环节</h1><h2 id="FBI"><a href="#FBI" class="headerlink" title="FBI"></a>FBI</h2><p>大部分破解3DS游戏机都自带了这个软件，但是有的人手贱会删除它，比如我。这里我把它的链接放出来，之后使用SOON2安装即可。当然最近听到一些破解系统SOON2失效的消息，并且此时你的FBI也没了的话，那我只能说你倒霉了。</p>
+<p><a href="https://pan.baidu.com/s/1i0nHw-n0SnwjliUYZo0elQ" target="_blank" rel="noopener" class="LinkCard">FBI</a></p>
+<p>提取码：zozf</p>
+<h2 id="FTPD"><a href="#FTPD" class="headerlink" title="FTPD"></a>FTPD</h2><h3 id="FTPD介绍"><a href="#FTPD介绍" class="headerlink" title="FTPD介绍"></a>FTPD介绍</h3><p>FTPD软件为今天得重中之重，就是让3DS实现FTP服务器的软件啦，不过建议大一点的游戏就不要使用这个了，因为3DS本来不支持FTP还有其他各种各样的原因，反正速度是很慢（大概维持在1M/s左右），尤其是稍微大一点的游戏，传输过程之缓慢——亲身体验，毕竟我没读卡器。</p>
+<h3 id="在3DS端安装FTPD"><a href="#在3DS端安装FTPD" class="headerlink" title="在3DS端安装FTPD"></a>在3DS端安装FTPD</h3><p>在上面的百度云链接有FBI的电脑端，先安装，然后下载FTPD的cia文件，以及链接FTP的电脑端。</p>
+<p><a href="https://pan.baidu.com/s/1e_UUzBgP4ZgM2uRtR7-sLQ " target="_blank" rel="noopener" class="LinkCard">FTP</a></p>
+<p>提取码：8tep</p>
+<p>3DS连接WIFI之后，打开FBI</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7wlfqh9j33402c04qq.jpg"/>
+
+<p>按<code>Y</code>键，你会看到一个<code>ip</code>地址</p>
+<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz87y4euuj33402c01ky.jpg" alt="IMG_2216.JPG"></p>
+<p>打开电脑端的安装器，输入相应的ip地址，点击闪电标志测试是否能够连接。</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8dkk695j30fl0bf0t8.jpg"/>
+
+<p>链接成功之后将<code>ftpd.cia</code>文件拖入，选中之后鼠标右键，发送即可。</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ia1ub8j30fl0bfwes.jpg"/>
+
+<p>安装完成之后会在3DS桌面看到一个礼物的图标，点开它，安装完成。</p>
+<h2 id="使用FTPD传输文件"><a href="#使用FTPD传输文件" class="headerlink" title="使用FTPD传输文件"></a>使用FTPD传输文件</h2><h3 id="3DS端"><a href="#3DS端" class="headerlink" title="3DS端"></a>3DS端</h3><p>运行FTPD，同样可以看到一个<code>ip</code>，后面的5000是<code>端口</code>。</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ro4r57j33402c01l0.jpg"/>
+
+<h3 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h3><p>解压<code>flashfxp5_gr.zip</code>，运行<code>FlashFXP.exe</code></p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8v1vsilj30ia0ast9r.jpg"/>
+
+<p>点击<code>会话</code>==&gt;<code>快速连接</code></p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8w1kjxsj31740pntb2.jpg"/>
+
+<p>输入相应的<code>ip</code>地址和<code>端口</code>，点击<code>连接</code></p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ysrjrhj30fu0a5t8y.jpg"/>
+
+<p>当右边出现3DS的文件目录说明成功。然后就可以操作了。3DS也会出现第一张图的画面。</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz91y7meqj31740pnq6j.jpg"/>
+
+<h3 id="其他平台"><a href="#其他平台" class="headerlink" title="其他平台"></a>其他平台</h3><p>像是其他平台如手机端都是可以进行操作的，道理相似，只需输入<code>ip</code>地址和<code>端口</code>即可。手机端可以下载如<code>ANDFTP</code>这类FTP链接的软件，甚至ES这种文件管理软件也是可以的。</p>
+<h1 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h1><p>除非迫不得已，其实我是不建议使用此类方法的，一是因为麻烦，二是因为3DS读写能力以及其他方面的性能确实不给力——我们不能为难一台10年前的游戏机是吧？何况他还是老任家的呢？</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9qa7mvej30tz0tz4cg.jpg"/>
       
     </div>
     
     
     
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="王世浩 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="王世浩 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    王世浩
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://49.235.42.210/2020/03/19/3DSFTPD/" title="3DS如何用FTP传输文件">https://49.235.42.210/2020/03/19/3DSFTPD/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"># 分享</a>
+          
+            <a href="/tags/%E6%B8%B8%E6%88%8F%E6%9C%BA/" rel="tag"># 游戏机</a>
+          
+            <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"># 工具</a>
+          
+            <a href="/tags/3DS/" rel="tag"># 3DS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/16/Tampermonkey/" rel="next" title="在电脑上规避学习通的一些方法">
+                <i class="fa fa-chevron-left"></i> 在电脑上规避学习通的一些方法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -360,6 +616,20 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -380,8 +650,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -482,6 +761,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作环节"><span class="nav-number">2.</span> <span class="nav-text">操作环节</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#FBI"><span class="nav-number">2.1.</span> <span class="nav-text">FBI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FTPD"><span class="nav-number">2.2.</span> <span class="nav-text">FTPD</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#FTPD介绍"><span class="nav-number">2.2.1.</span> <span class="nav-text">FTPD介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在3DS端安装FTPD"><span class="nav-number">2.2.2.</span> <span class="nav-text">在3DS端安装FTPD</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用FTPD传输文件"><span class="nav-number">2.3.</span> <span class="nav-text">使用FTPD传输文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3DS端"><span class="nav-number">2.3.1.</span> <span class="nav-text">3DS端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电脑端"><span class="nav-number">2.3.2.</span> <span class="nav-text">电脑端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他平台"><span class="nav-number">2.3.3.</span> <span class="nav-text">其他平台</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后话"><span class="nav-number">3.</span> <span class="nav-text">后话</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -673,6 +968,18 @@
       <script id="dsq-count-scr" src="https://solywsh.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://49.235.42.210/2020/03/19/3DSFTPD/';
+          this.page.identifier = '2020/03/19/3DSFTPD/';
+          this.page.title = '3DS如何用FTP传输文件';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://solywsh.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
