@@ -4,7 +4,7 @@
     <title>2020-03-16 [作业] [第六章]</title>
     <url>/2020/03/16/2020-03-16-homework/</url>
     <content><![CDATA[<blockquote>
-<p>注意因为hexo渲染问题，导致部分标题目录无法正常现实</p>
+<p>注意因为hexo渲染问题，导致部分标题目录无法正常显示</p>
 </blockquote>
 <h1 id="矩阵对角线"><a href="#矩阵对角线" class="headerlink" title="矩阵对角线"></a>矩阵对角线</h1><p><strong>题目内容：</strong>求一个3*3的整型矩阵主对角线元素之和</p>
 <p><strong>输入格式:</strong>   以从左往右、从上往下的顺序依次输入矩阵里的9个元素</p>
