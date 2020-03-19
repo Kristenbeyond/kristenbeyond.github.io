@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://49.235.42.210/2020/03/16/2020-03-16-homework/</loc>
+    
+    <lastmod>2020-03-19T02:09:39.960Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://49.235.42.210/2020/03/05/2020-03-05-homework/</loc>
+    
+    <lastmod>2020-03-18T09:14:56.152Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://49.235.42.210/archives/index.html</loc>
+    
+    <lastmod>2020-03-18T02:07:48.737Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://49.235.42.210/about/index.html</loc>
+    
+    <lastmod>2020-03-18T02:07:18.718Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://49.235.42.210/commonweal/index.html</loc>
     
     <lastmod>2020-03-18T02:03:59.932Z</lastmod>
@@ -19,20 +47,6 @@
     <loc>https://49.235.42.210/categories/index.html</loc>
     
     <lastmod>2020-03-18T02:01:17.675Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://49.235.42.210/archives/index.html</loc>
-    
-    <lastmod>2020-03-18T02:01:08.265Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://49.235.42.210/about/index.html</loc>
-    
-    <lastmod>2020-03-18T02:01:00.266Z</lastmod>
     
   </url>
   
@@ -65,21 +79,14 @@
   </url>
   
   <url>
-    <loc>https://49.235.42.210/2020/03/05/2020-03-05-homework/</loc>
-    
-    <lastmod>2020-03-16T10:56:46.810Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://49.235.42.210/404.html</loc>
+    <loc>https://49.235.42.210/commonweal/404.html</loc>
     
     <lastmod>2020-03-05T07:58:22.255Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://49.235.42.210/commonweal/404.html</loc>
+    <loc>https://49.235.42.210/404.html</loc>
     
     <lastmod>2020-03-05T07:58:22.255Z</lastmod>
     

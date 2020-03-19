@@ -1,6 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2020-03-16 [作业] [第六章]</title>
+    <url>/2020/03/16/2020-03-16-homework/</url>
+    <content><![CDATA[<h2 id="矩阵对角线"><a href="#矩阵对角线" class="headerlink" title="矩阵对角线"></a>矩阵对角线</h2><p><strong>题目内容：</strong>求一个3*3的整型矩阵主对角线元素之和</p>
+<p><strong>输入格式:</strong>以从左往右、从上往下的顺序依次输入矩阵里的9个元素</p>
+<p><strong>输出格式：</strong>主对角线元素之和</p>
+<p><strong>输入样例：</strong>1 2 3 4 5 6 7 8 9</p>
+<p><strong>输出样例：</strong>15</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">3</span>][<span class="number">3</span>],b;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	b = a[<span class="number">0</span>][<span class="number">0</span>] + a[<span class="number">1</span>][<span class="number">1</span>] + a[<span class="number">2</span>][<span class="number">2</span>];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,b);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//violetwsh.com</span></span><br></pre></td></tr></table></figure>
+
+<p>非常简单，但是我在<code>scanf</code>后老是忘记&amp;，每次都要检查很久。</p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p><strong>题目内容：</strong>用任意排序法， 对10个整数进行从小到大排序</p>
+<p><strong>输入格式:</strong>输入10个数，以空格隔开</p>
+<p><strong>输出格式：</strong>从小到大排序后的10个整数，以空格隔开（注意，输出第十个数后不需要输出一个空格，否则可能因为格式原因导致判错）</p>
+<p><strong>输入样例：</strong>1 3 5 7 9 2 4 6 8 10</p>
+<p><strong>输出样例：</strong>1 2 3 4 5 6 7 8 9 10</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">int</span> i, j, t;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span> ( j = <span class="number">0</span>; j &lt; <span class="number">9</span>; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">9</span>-j; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a[i]&gt;a[i+<span class="number">1</span>])</span><br><span class="line">			&#123;</span><br><span class="line">				t = a[i]; a[i] = a[i + <span class="number">1</span>]; a[i + <span class="number">1</span>] = t;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, a[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">" %d"</span>, a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意1：书上P76页有一个点提醒</p>
+<div class="note info"><p>在输入数值数据时，如输入空格、回车、TAB键或遇到<strong>非法字符</strong>（不属于数值的字符），认为改数据结束。 (md partial supported) </p></div>
+
+我在写`for ( i = 0; i < 10; i++) scanf("%d", &a[i]);`时突然注意到题目要求`以空格隔开`，于是我开始犹豫了，改成了这样：
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">scanf</span>(<span class="string">"%d %d %d %d %d %d %d %d %d %d"</span>,&amp;a[<span class="number">0</span>], &amp;a[<span class="number">1</span>], &amp;a[<span class="number">2</span>], &amp;a[<span class="number">3</span>], &amp;a[<span class="number">4</span>], &amp;a[<span class="number">5</span>], &amp;a[<span class="number">6</span>], &amp;a[<span class="number">7</span>], &amp;a[<span class="number">8</span>], &amp;a[<span class="number">9</span>]);</span><br></pre></td></tr></table></figure>
+
+后来和秦甲禾同学讨论之后找到了这个比较满意的说法。
+
+<a href="http://labjh.xyz/" target="_blank" rel="noopener" class="LinkCard">甲禾大佬的blog，没有梯子不容易进哦</a>
+
+注意2：在第五章水仙花时就遇到了`（注意，输出第十个数后不需要输出一个空格，否则可能因为格式原因导致判错）`这种情况，只是当时没有说明，这次稍微换了一下思路。
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="built_in">printf</span>(<span class="string">"%d"</span>, a[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">" %d"</span>, a[i]);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+### 其他排序方法
+
+
+
+
+比较常用的有12中方法，理论上都是通用的，在C语言上实现见上面链接。但老实这些我也不知道，就当补充了。
+
+<a href="https://blog.csdn.net/weixin_42617375/article/details/103536193" target="_blank" rel="noopener" class="LinkCard">C语言的排序</a>
+
+
+
+
+
+## 逆序存放
+
+
+
+
+**题目内容：**将一个长度为5数组中的值按逆序重新存放。例如，原来顺序为8，6，5，4，1，要求改为1，4，5，6，8
+
+**输入样例：**8 6 5 4 1 
+
+**输出样例：**1 4 5 6 8
+
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span>  <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>], i, n = <span class="number">5</span>, temp;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp = a[i];</span><br><span class="line">        a[i] = a[n - i - <span class="number">1</span>];</span><br><span class="line">        a[n - i - <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">" %d"</span>, a[i]);</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;<span class="comment">//violetwsh.com这一个防爬虫备注</span></span><br></pre></td></tr></table></figure>
+
+
+这里要求的事将数据**重新存放**，而我最开始就直接输入输出了，导致只有结果是对的，查了一下之后才发现这种做法，稍微改进一下就对了。我把链接放出来，毕竟也白嫖了人家。
+
+<a href="https://blog.csdn.net/luo446718254/article/details/52387019?utm_source=blogxgwz5" target="_blank" rel="noopener" class="LinkCard">重新存放</a>
+
+
+
+在那个网页的评论里有人提出了另外的做法，不过，这种做法是错的，就像我之前讲的那样，需要**重新存放**。
+
+代码放出来：
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt; </span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">5</span>]=&#123;<span class="number">8</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">1</span>&#125;; </span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>,n=<span class="number">5</span>; </span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">4</span>;i&gt;=<span class="number">0</span>;i--) </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i]); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+## 杨辉三角
+
+**题目内容：**输出一个杨辉三角形的前10行，每行两个数之间用'-'隔开
+
+**输出样例：**
+
+
+
+1
+
+1-1
+
+1-2-1
+
+1-3-3-1
+
+......
+
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> s = <span class="number">1</span>;<span class="comment">//中间数                   </span></span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"1\n"</span>);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">2</span>; i &lt;= <span class="number">10</span>; s = <span class="number">1</span>, i++)         </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"1-"</span>);<span class="comment">//一行的开头</span></span><br><span class="line">        <span class="keyword">if</span> (i&lt;i+<span class="number">1</span>)        </span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= i - <span class="number">2</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%d-"</span>, (s = (i - j) * s / j));<span class="comment">//其余的中间数-           </span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"1\n"</span>);<span class="comment">//一行的结尾              </span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+这是目前最精简的写法，其中核心为`printf("%d-", (s = (i - j) * s / j));`即每行的中间数，因为我们都知道每行的开头和结尾都是1所以不强调。找出规律即可，当然规律肯定不是我找的。
+
+其他方法
+
+<a href="[https://baike.baidu.com/item/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/215098?fr=aladdin](https://baike.baidu.com/item/杨辉三角/215098?fr=aladdin)" class="LinkCard">百度百科杨辉三角</a>
+
+
+百度杨辉三角有很多方法，你可以点击下面的链接，里边的有很多方法。
+
+
+
+
+
+
+
+
+
+## 折半查找（注意此题有待完善）
+
+
+**目前拿去提交时第二项无法通过，原因正在找，猜测与“无此数”有关。**
+
+**题目内容：**有15个数按由**大到小**顺序存放在一个数组中，输入一个数，要求用**折半查找法**找出该数是数组中第几个元素的值。如果该数不在数组中，则输出“无此数”。
+
+**输入格式:**
+
+第一行输入这15个数的数组
+
+第二行输入待查找的数
+
+**输出格式：**
+
+若存在，输出是第几个元素
+
+若不存在，输出“无此数”
+
+**输入样例：**
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+
+2
+
+**输出样例：**
+
+2
+
+<div class="note danger"><p>折半查找法是效率较高的一种查找方法。假设有已经按照从小到大的顺序排列好的五个整数a0~a4，要查找的数是X，其基本思想是： 设查找数据的范围下限为l=0，上限为h=4，求中点m=（l+h）/2，用X与中点元素am比较，若X等于am，即找到，停止查找；否则，若X大于am，替换下限l=m+1，到下半段继续查找；若X小于am，换上限h=m-1，到上半段继续查找；如此重复前面的过程直到找到或者l&gt;h为止。如果l&gt;h，说明没有此数，打印找不到信息，程序结束。（baidu）  (md partial supported) </p></div>
+
+<p>1.在折半查找法中意思是替换上下限不断地与中间数比较。</p>
+<p>2.<del>由大到小排序。</del>感觉是题错了，而且后面拿去测试很矛盾。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">15</span>], b, c=<span class="number">0</span>,low, h, m, i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">15</span>; )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (b != a[i])i++;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			c = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (c!=<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"无此数"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (low = a[<span class="number">0</span>], h = a[<span class="number">14</span>]; low &lt;= h;)</span><br><span class="line">		&#123;</span><br><span class="line">			m = (low + h) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (b  &lt; a[m])h = a[m - <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (b &gt; a[m])low = a[m + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, m + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="字符串合并"><a href="#字符串合并" class="headerlink" title="字符串合并"></a>字符串合并</h2><p><strong>题目内容：</strong> 编一程序，将两个字符串连接起来，不要用strcat函数</p>
+<p><strong>输入格式:</strong></p>
+<p>字符串1</p>
+<p>字符串2</p>
+<p><strong>输出格式：</strong>合并字符串</p>
+<p><strong>输入样例：</strong>        //原题就没有，按照书上的内容，假设为country</p>
+<p>*<em>输出样例： *</em>       //原题也没有，假设side</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">char</span> s1[<span class="number">20</span>], s2[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s1);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%s"</span>, s2);</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; s1[i] != <span class="string">'\0'</span>; i++);</span><br><span class="line">    <span class="keyword">for</span> (j = <span class="number">0</span>; s2[j] != <span class="string">'\0'</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">        s1[i++] = s2[j];</span><br><span class="line">    &#125;</span><br><span class="line">    s1[i] = <span class="string">'\0'</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%s"</span>, s1);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>1.这道题虽然简单，但是尤为重要的时后边的<code>s1[i] = &#39;\0&#39;;</code>不然的话，结果就会是这样：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">country</span><br><span class="line">side</span><br><span class="line">countryside烫烫烫烫烫烫?T鸒</span><br></pre></td></tr></table></figure>
+
+<p>2.<code>scanf(&quot;%s&quot;, s1);</code>后面的s1不用再加地址符<code>&amp;</code>。</p>
+<h2 id="数组统计"><a href="#数组统计" class="headerlink" title="数组统计"></a>数组统计</h2><p><strong>题目内容：</strong>键盘输入一个长度为10数组，统计其中有多少不相同的数据。</p>
+<p><strong>输入格式:</strong>   依次输入数组元素，以空格隔开</p>
+<p><strong>输出格式：</strong>输出数组中不相同的数的个数</p>
+<p><strong>输入样例：</strong>1 2 3 4 5 1 2 3 4 5</p>
+<p><strong>输出样例：</strong>5</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">10</span>], n, i, j, t;</span><br><span class="line">    n = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++)</span><br><span class="line">            <span class="keyword">if</span> (a[j] == t) <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">if</span> (j == n)</span><br><span class="line">            a[n++] = t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, n);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>这不是我写的</strong>，是我查的，然后就改了个数字，因为比我的要简洁许多（但是不容易理解）就直接放这儿了。先把原文链接放出来。</p>
+<p><a href="https://zhidao.baidu.com/question/1174037037123123099.html" target="_blank" rel="noopener" class="LinkCard">c语言问题 统计不同数字的个数</a></p>
+<h2 id="数组交换"><a href="#数组交换" class="headerlink" title="数组交换"></a>数组交换</h2><p><strong>题目内容：</strong>输入一个长度为10的整数数组，将其中出现的素数首尾交换，即第一个素数与最后一个素数交换，第二个素数与倒数第二个素数交换……，非素数保持位置不变，输出交换以后的数组。</p>
+<p><strong>输入样例：</strong>108 4 19 7 23 66 49 13 33 35</p>
+<p><strong>输出样例：</strong>108 4 13 23 7 66 49 19 33 35</p>
+<h3 id="素数的两-种求法"><a href="#素数的两-种求法" class="headerlink" title="素数的两 种求法"></a>素数的两 种求法</h3><div class="note danger"><p>i 在2到 i-1之间任取一个数,如果n能被整除则不是素数，否则就是素数</p>
+<p>for (i = 2; i &lt;= (n - 1); i++)<br>if（n% i＝＝0）</p>
+<p>(md partial supported) </p></div>
+
+<div class="note info"><p>i 在2到 sqrt(n) 间任取一个数,如果 i 能被整除则不是素数，否则就是素数</p>
+<p>for (i = 2; i &lt; (n = sqrt(n)); i++)<br>if (n % i == 0)</p>
+<p>(md partial supported) </p></div>
+
+<p>我用的第一种</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">10</span>], b[<span class="number">10</span>], i, j, k, m;</span><br><span class="line">	<span class="keyword">int</span> emp, <span class="built_in">min</span>, <span class="built_in">max</span>;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>, k = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)<span class="comment">//这里输入并判断</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">2</span>; j &lt; a[i]; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a[i] % j == <span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (j == a[i])</span><br><span class="line">		&#123;</span><br><span class="line">			b[k] = i;<span class="comment">//素数位置</span></span><br><span class="line">			k++;<span class="comment">//素数个数</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>, m = k - <span class="number">1</span>; i &lt; k/ <span class="number">2</span>; i++, m--)<span class="comment">//替换</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">min</span> = b[i];</span><br><span class="line">		<span class="built_in">max</span> = b[m];</span><br><span class="line">		emp = a[<span class="built_in">min</span>];</span><br><span class="line">		a[<span class="built_in">min</span>] = a[<span class="built_in">max</span>];</span><br><span class="line">		a[<span class="built_in">max</span>] = emp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>, a[<span class="number">0</span>]);<span class="comment">//打印输出部分</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">" %d"</span>, a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我的思路是：在输入的时候判断是否为素数，如说是，将素数在<code>a[10]</code>中的位置<code>i</code>记录到<code>b[10]</code>,输入完成之后再根据位置信息变换。</p>
+<p>当然，秦甲禾同学提供了另外一种思路，就是在数字输入完成之后</p>
+<blockquote>
+<p>数组从前到后检测素数，检测到之后从后往前检测然后互换</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>homework</category>
+      </categories>
+      <tags>
+        <tag>作业</tag>
+        <tag>C语言</tag>
+        <tag>程序设计</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在电脑上规避学习通的一些方法</title>
     <url>/2020/03/16/Tampermonkey/</url>
     <content><![CDATA[<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>本文章目的只是用来分享，本人的网课全部亲自听完，作业为自己做的。使用插件的原因只是因为在听网课时鼠标不能自由移动，常常有各种各样的事情找上我使我不得不（被迫）暂停视频，很是麻烦。</p>
@@ -286,7 +501,7 @@
 
 <p><strong>最后发现还不如最开始简练。</strong></p>
 <h2 id="成绩等级"><a href="#成绩等级" class="headerlink" title="成绩等级"></a>成绩等级</h2><p><strong>题目内容：</strong></p>
-<p>给出一百分制成绩，要求输出成绩等级’A’、’B’、’C’、’D’、’E’。90分以上为‘A’,80<del>89为‘B’,70</del>79为‘C’,60~69为‘D’, 60分以下为‘E’。</p>
+<p>给出一百分制成绩，要求输出成绩等级’A’、’B’、’C’、’D’、’E’。90分以上为‘A’,80-89为‘B’,70-79为‘C’,60-69为‘D’, 60分以下为‘E’。</p>
 <p><strong>输入格式:</strong>   成绩(0-100)</p>
 <p><strong>输出格式：</strong>成绩等级</p>
 <p><strong>输入样例：</strong>95</p>
