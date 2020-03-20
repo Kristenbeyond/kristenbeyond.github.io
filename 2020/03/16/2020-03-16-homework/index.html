@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="马猴小站">
 <meta property="og:description" content="注意因为hexo渲染问题，导致部分标题目录无法正常显示  矩阵对角线题目内容：求一个3*3的整型矩阵主对角线元素之和 输入格式:   以从左往右、从上往下的顺序依次输入矩阵里的9个元素 输出格式：主对角线元素之和 输入样例：1 2 3 4 5 6 7 8 9 输出样例：15 123456789101112131415161718#include&lt;stdio.h&gt;int main()&amp;">
 <meta property="article:published_time" content="2020-03-16T08:26:42.000Z">
-<meta property="article:modified_time" content="2020-03-19T02:57:50.701Z">
+<meta property="article:modified_time" content="2020-03-20T05:06:24.995Z">
 <meta property="article:author" content="王世浩">
 <meta property="article:tag" content="作业">
 <meta property="article:tag" content="C语言">
@@ -423,23 +423,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                <span title="字数统计">
-                  
-                </span>
-              
-
-              
-
-              
-            </div>
-          
 
           
 
@@ -584,8 +567,9 @@
 
 <p>1.在折半查找法中意思是替换上下限不断地与中间数比较。</p>
 <p>2.<del>由大到小排序。</del>感觉是题错了，而且后面拿去测试很矛盾。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">15</span>], b, c=<span class="number">0</span>,low, h, m, i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">15</span>; )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (b != a[i])i++;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			c = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (c!=<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"无此数"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (low = a[<span class="number">0</span>], h = a[<span class="number">14</span>]; low &lt;= h;)</span><br><span class="line">		&#123;</span><br><span class="line">			m = (low + h) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (b  &lt; a[m])h = a[m - <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (b &gt; a[m])low = a[m + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, m + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">15</span>], b, c=<span class="number">0</span>,low, h, m, i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">15</span>; )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (b != a[i])i++;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			c = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (c!=<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"无此数"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (low = a[<span class="number">0</span>], h = a[<span class="number">14</span>]; low &lt;= h;)<span class="comment">//应该改为for (low = 0, h = 14; low &lt;= h;)</span></span><br><span class="line">		&#123;</span><br><span class="line">			m = (low + h) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (b  &lt; a[m])h = a[m - <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (b &gt; a[m])low = a[m + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, m + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3 id="（3-20）更正"><a href="#（3-20）更正" class="headerlink" title="（3.20）更正"></a>（3.20）更正</h3><p>1.张元瑞同学今天告诉我代码bug，在22行<code>for (low = a[0], h = a[14]; low &lt;= h;)</code>应该改为<code>for (low = 0, h = 14; low &lt;= h;)</code>，这样是防止有不连续的数字出现的情况，当不连续的数字出现时会导致判断错误。</p>
 <h1 id="字符串合并"><a href="#字符串合并" class="headerlink" title="字符串合并"></a>字符串合并</h1><p><strong>题目内容：</strong> 编一程序，将两个字符串连接起来，不要用strcat函数</p>
 <p><strong>输入格式:</strong></p>
 <p>字符串1</p>
@@ -730,8 +714,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/03/15/cemu/" rel="next" title="如何在电脑用cemu玩塞尔达？">
-                <i class="fa fa-chevron-left"></i> 如何在电脑用cemu玩塞尔达？
+              <a href="/2020/03/16/Tampermonkey/" rel="next" title="在电脑上规避学习通的一些方法">
+                <i class="fa fa-chevron-left"></i> 在电脑上规避学习通的一些方法
               </a>
             
           </div>
@@ -740,8 +724,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/03/16/Tampermonkey/" rel="prev" title="在电脑上规避学习通的一些方法">
-                在电脑上规避学习通的一些方法 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/03/19/3DSFTPD/" rel="prev" title="3DS如何用FTP传输文件">
+                3DS如何用FTP传输文件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -838,7 +822,7 @@
              
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -849,7 +833,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -860,7 +844,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -935,7 +919,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵对角线"><span class="nav-number">1.</span> <span class="nav-text">矩阵对角线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">2.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意1"><span class="nav-number">2.1.</span> <span class="nav-text">注意1</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串合并"><span class="nav-number">3.</span> <span class="nav-text">字符串合并</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">3.1.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组统计"><span class="nav-number">4.</span> <span class="nav-text">数组统计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组交换"><span class="nav-number">5.</span> <span class="nav-text">数组交换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#素数的两-种求法"><span class="nav-number">5.1.</span> <span class="nav-text">素数的两 种求法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#矩阵对角线"><span class="nav-number">1.</span> <span class="nav-text">矩阵对角线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#排序"><span class="nav-number">2.</span> <span class="nav-text">排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意1"><span class="nav-number">2.1.</span> <span class="nav-text">注意1</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（3-20）更正"><span class="nav-number">2.1.1.</span> <span class="nav-text">（3.20）更正</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串合并"><span class="nav-number">3.</span> <span class="nav-text">字符串合并</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">3.1.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组统计"><span class="nav-number">4.</span> <span class="nav-text">数组统计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组交换"><span class="nav-number">5.</span> <span class="nav-text">数组交换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#素数的两-种求法"><span class="nav-number">5.1.</span> <span class="nav-text">素数的两 种求法</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -965,6 +949,31 @@
 </div>
 
 
+
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment-precise-range-plugin@1.3.0/moment-precise-range.min.js"></script>
+  <script>
+    function timer() {
+      var ages = moment.preciseDiff(moment(),moment(20200301,"YYYYMMDD"));
+      ages = ages.replace(/years?/, "年");
+      ages = ages.replace(/months?/, "月");
+      ages = ages.replace(/days?/, "天");
+      ages = ages.replace(/hours?/, "小时");
+      ages = ages.replace(/minutes?/, "分");
+      ages = ages.replace(/seconds?/, "秒");
+      ages = ages.replace(/\d+/g, '<span style="color:#1890ff">$&</span>');
+      div.innerHTML = `运行时间 ${ages}`;
+    }
+    var div = document.createElement("div");
+    //插入到copyright之后
+    var copyright = document.querySelector(".copyright");
+    document.querySelector(".footer-inner").insertBefore(div, copyright.nextSibling);
+    timer();
+    setInterval("timer()",1000)
+  </script>
+
+
+
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
@@ -974,6 +983,8 @@
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
 
 
 
@@ -1612,5 +1623,54 @@
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+
+
+
+  <script src="/js/src/wobblewindow.js"></script>
+  <script>
+    //只在桌面版网页启用特效
+    if (window.innerWidth > 768) {
+      $(document).ready(function () {
+        
+        // 根据类名获取，而不是id
+        $('.header').wobbleWindow({
+          radius: 50,
+          movementTop: false,
+          movementLeft: false,
+          movementRight: false,
+          debug: false,
+        });
+        
+
+        
+         // 根据类名获取，而不是id
+        $('.sidebar').wobbleWindow({
+          radius: 50,
+          movementLeft: false,
+          movementTop: false,
+          movementBottom: false,
+          position: 'fixed',
+          debug: false,
+        });
+        
+
+        
+         // 根据类名获取，而不是id
+        $('.footer').wobbleWindow({
+          radius: 50,
+          movementBottom: false,
+          movementLeft: false,
+          movementRight: false,
+          
+          position: 'absolute',
+          debug: false,
+        });
+        
+      });
+    }
+  </script>
+
+
+
+  <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
