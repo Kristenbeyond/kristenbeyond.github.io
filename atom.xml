@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://49.235.42.210/"/>
-  <updated>2020-03-20T03:04:44.204Z</updated>
+  <updated>2020-03-22T03:06:28.547Z</updated>
   <id>https://49.235.42.210/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>视频嵌入测试/分享--瘟疫医生</title>
+    <link href="https://49.235.42.210/2020/03/22/videotest/"/>
+    <id>https://49.235.42.210/2020/03/22/videotest/</id>
+    <published>2020-03-22T04:00:00.000Z</published>
+    <updated>2020-03-22T03:06:28.547Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;视频测试&quot;&gt;&lt;a href=&quot;#视频测试&quot; class=&quot;headerlink&quot; title=&quot;视频测试&quot;&gt;&lt;/a&gt;视频测试&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="videos" scheme="https://49.235.42.210/categories/videos/"/>
+    
+    
+      <category term="test" scheme="https://49.235.42.210/tags/test/"/>
+    
+      <category term="个人" scheme="https://49.235.42.210/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+      <category term="video，share" scheme="https://49.235.42.210/tags/video%EF%BC%8Cshare/"/>
+    
+  </entry>
   
   <entry>
     <title>个人用：hexo next主题配置文件详细说明</title>
@@ -75,6 +100,37 @@
   </entry>
   
   <entry>
+    <title>在电脑上规避学习通的一些方法</title>
+    <link href="https://49.235.42.210/2020/03/16/Tampermonkey/"/>
+    <id>https://49.235.42.210/2020/03/16/Tampermonkey/</id>
+    <published>2020-03-16T08:26:42.000Z</published>
+    <updated>2020-03-17T16:02:51.826Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Plugin" scheme="https://49.235.42.210/categories/Plugin/"/>
+    
+    
+      <category term="网课" scheme="https://49.235.42.210/tags/%E7%BD%91%E8%AF%BE/"/>
+    
+      <category term="Tampermonkey" scheme="https://49.235.42.210/tags/Tampermonkey/"/>
+    
+      <category term="学习通" scheme="https://49.235.42.210/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2020-03-16 [作业] [第六章]</title>
     <link href="https://49.235.42.210/2020/03/16/2020-03-16-homework/"/>
     <id>https://49.235.42.210/2020/03/16/2020-03-16-homework/</id>
@@ -104,37 +160,6 @@
       <category term="程序设计" scheme="https://49.235.42.210/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
     
       <category term="分享" scheme="https://49.235.42.210/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在电脑上规避学习通的一些方法</title>
-    <link href="https://49.235.42.210/2020/03/16/Tampermonkey/"/>
-    <id>https://49.235.42.210/2020/03/16/Tampermonkey/</id>
-    <published>2020-03-16T08:26:42.000Z</published>
-    <updated>2020-03-17T16:02:51.826Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Plugin" scheme="https://49.235.42.210/categories/Plugin/"/>
-    
-    
-      <category term="网课" scheme="https://49.235.42.210/tags/%E7%BD%91%E8%AF%BE/"/>
-    
-      <category term="Tampermonkey" scheme="https://49.235.42.210/tags/Tampermonkey/"/>
-    
-      <category term="学习通" scheme="https://49.235.42.210/tags/%E5%AD%A6%E4%B9%A0%E9%80%9A/"/>
     
   </entry>
   
