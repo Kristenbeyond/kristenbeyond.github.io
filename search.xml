@@ -18,7 +18,9 @@
 <p>在编辑.md文档时，插入以下代码(注意不要引用代码块)，然后替换掉相应的内容即可</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span></span><br><span class="line">    在此处粘贴（并去掉 <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span>） style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"&gt; <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=64768491&amp;cid=112430226&amp;page=1"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span> <span class="attr">style</span>=<span class="string">"position: absolute; width: 100%; height: 100%; left: 0; top: 0;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"position: relative; width: 100%; height: 0; padding-bottom: 75%;"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"//player.bilibili.com/player.html?aid=64768491&amp;cid=112430226&amp;page=1"</span> <span class="attr">scrolling</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">framespacing</span>=<span class="string">"0"</span> <span class="attr">allowfullscreen</span>=<span class="string">"true"</span> <span class="attr">style</span>=<span class="string">"position: absolute; width: 100%; height: 100%; left: 0; top: 0;"</span>&gt;</span> <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="视频分享"><a href="#视频分享" class="headerlink" title="视频分享"></a>视频分享</h1>]]></content>
       <categories>
         <category>videos</category>
       </categories>
@@ -49,14 +51,14 @@
   <entry>
     <title>3DS如何用FTP传输文件</title>
     <url>/2020/03/19/3DSFTPD/</url>
-    <content><![CDATA[<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9hgrjf2j30tc0tcwyp.jpg"/>
+    <content><![CDATA[<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9hgrjf2j30tc0tcwyp.jpg">
 
 <h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>故事还得从一只蝙蝠说起，放暑假的时候把(老)3DS带回了家，结果却发现把读卡器带回家，这不要紧，因为有<a href="http://nintendo-ds.dcemu.co.uk/-3ds-fbi-v2-5-3-1161570.html" target="_blank" rel="noopener">FBI</a>——3DS上的无线安装软件，但是，FBI只是支持<code>cia</code>格式的安装包，且只能安装，不能进行文件的传输。</p>
 <p>问题来了，一天，我突然想玩NDS的游戏，而有的NDS数字版游戏不支持在3DS上安装，一个实现的办法是在3DS游戏机上模拟NDS系统，实现套娃的操作——缺点就是耗电。</p>
 <p>可是，因为模拟NDS系统不仅仅是安装一个软件那么简单，还需要到系统的根目录进行文件的拷贝修改等等。</p>
 <p>那没有读卡器怎么操作？暂时又出不了门，又买不了。</p>
 <p>原理很简单，在链接网络的情况下让3DS成为FTP（File Transfer Protocol，文件传输协议）<strong>服务器即可</strong>。</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7o6iigxj33402c07wi.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7o6iigxj33402c07wi.jpg">
 
 <h1 id="操作环节"><a href="#操作环节" class="headerlink" title="操作环节"></a>操作环节</h1><h2 id="FBI"><a href="#FBI" class="headerlink" title="FBI"></a>FBI</h2><p>大部分破解3DS游戏机都自带了这个软件，但是有的人手贱会删除它，比如我。这里我把它的链接放出来，之后使用SOON2安装即可。当然最近听到一些破解系统SOON2失效的消息，并且此时你的FBI也没了的话，那我只能说你倒霉了。</p>
 <p><a href="https://pan.baidu.com/s/1i0nHw-n0SnwjliUYZo0elQ" target="_blank" rel="noopener" class="LinkCard">FBI</a></p>
@@ -66,35 +68,35 @@
 <p><a href="https://pan.baidu.com/s/1e_UUzBgP4ZgM2uRtR7-sLQ " target="_blank" rel="noopener" class="LinkCard">FTP</a></p>
 <p>提取码：8tep</p>
 <p>3DS连接WIFI之后，打开FBI</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7wlfqh9j33402c04qq.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz7wlfqh9j33402c04qq.jpg">
 
 <p>按<code>Y</code>键，你会看到一个<code>ip</code>地址</p>
 <p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz87y4euuj33402c01ky.jpg" alt="IMG_2216.JPG"></p>
 <p>打开电脑端的安装器，输入相应的ip地址，点击闪电标志测试是否能够连接。</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8dkk695j30fl0bf0t8.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8dkk695j30fl0bf0t8.jpg">
 
 <p>链接成功之后将<code>ftpd.cia</code>文件拖入，选中之后鼠标右键，发送即可。</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ia1ub8j30fl0bfwes.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ia1ub8j30fl0bfwes.jpg">
 
 <p>安装完成之后会在3DS桌面看到一个礼物的图标，点开它，安装完成。</p>
 <h2 id="使用FTPD传输文件"><a href="#使用FTPD传输文件" class="headerlink" title="使用FTPD传输文件"></a>使用FTPD传输文件</h2><h3 id="3DS端"><a href="#3DS端" class="headerlink" title="3DS端"></a>3DS端</h3><p>运行FTPD，同样可以看到一个<code>ip</code>，后面的5000是<code>端口</code>。</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ro4r57j33402c01l0.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ro4r57j33402c01l0.jpg">
 
 <h3 id="电脑端"><a href="#电脑端" class="headerlink" title="电脑端"></a>电脑端</h3><p>解压<code>flashfxp5_gr.zip</code>，运行<code>FlashFXP.exe</code></p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8v1vsilj30ia0ast9r.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8v1vsilj30ia0ast9r.jpg">
 
 <p>点击<code>会话</code>==&gt;<code>快速连接</code></p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8w1kjxsj31740pntb2.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8w1kjxsj31740pntb2.jpg">
 
 <p>输入相应的<code>ip</code>地址和<code>端口</code>，点击<code>连接</code></p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ysrjrhj30fu0a5t8y.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz8ysrjrhj30fu0a5t8y.jpg">
 
 <p>当右边出现3DS的文件目录说明成功。然后就可以操作了。3DS也会出现第一张图的画面。</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz91y7meqj31740pnq6j.jpg"/>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz91y7meqj31740pnq6j.jpg">
 
 <h3 id="其他平台"><a href="#其他平台" class="headerlink" title="其他平台"></a>其他平台</h3><p>像是其他平台如手机端都是可以进行操作的，道理相似，只需输入<code>ip</code>地址和<code>端口</code>即可。手机端可以下载如<code>ANDFTP</code>这类FTP链接的软件，甚至ES这种文件管理软件也是可以的。</p>
 <h1 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h1><p>除非迫不得已，其实我是不建议使用此类方法的，一是因为麻烦，二是因为3DS读写能力以及其他方面的性能确实不给力——我们不能为难一台10年前的游戏机是吧？何况他还是老任家的呢？</p>
-<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9qa7mvej30tz0tz4cg.jpg"/>]]></content>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcz9qa7mvej30tz0tz4cg.jpg">]]></content>
       <categories>
         <category>game</category>
       </categories>
@@ -233,6 +235,9 @@
 
 <p>1.在折半查找法中意思是替换上下限不断地与中间数比较。</p>
 <p>2.<del>由大到小排序。</del>感觉是题错了，而且后面拿去测试很矛盾。</p>
+<h2 id="正确答案"><a href="#正确答案" class="headerlink" title="正确答案"></a>正确答案</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">15</span>],i,j,t,top,bott,sign,num,mid;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">15</span>;i++)</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;num);</span><br><span class="line">		top=<span class="number">0</span>;</span><br><span class="line">		bott=<span class="number">14</span>;</span><br><span class="line">		sign=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">while</span>( top&lt;bott ) &#123;</span><br><span class="line">			mid=(top+bott)/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">if</span> ( num==a[mid]) &#123;</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d"</span>,mid+<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> ( num&lt;a[mid] )</span><br><span class="line">		bott=mid<span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">		top=mid+<span class="number">1</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"无此数"</span>); </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我的：（第二点没有的分，正在查找原因）</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">15</span>], b, c=<span class="number">0</span>,low, h, m, i;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">15</span>; )</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (b != a[i])i++;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			c = <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (c!=<span class="number">1</span>)<span class="built_in">printf</span>(<span class="string">"无此数"</span>);</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (low = a[<span class="number">0</span>], h = a[<span class="number">14</span>]; low &lt;= h;)<span class="comment">//应该改为for (low = 0, h = 14; low &lt;= h;)</span></span><br><span class="line">		&#123;</span><br><span class="line">			m = (low + h) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">if</span> (b  &lt; a[m])h = a[m - <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span> <span class="keyword">if</span> (b &gt; a[m])low = a[m + <span class="number">1</span>];</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"%d"</span>, m + <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>; </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="（3-20）更正"><a href="#（3-20）更正" class="headerlink" title="（3.20）更正"></a>（3.20）更正</h3><p>1.张元瑞同学今天告诉我代码bug，在22行<code>for (low = a[0], h = a[14]; low &lt;= h;)</code>应该改为<code>for (low = 0, h = 14; low &lt;= h;)</code>，这样是防止有不连续的数字出现的情况，当不连续的数字出现时会导致判断错误。</p>
@@ -543,7 +548,7 @@
 <h3 id="错误用法"><a href="#错误用法" class="headerlink" title="错误用法"></a>错误用法</h3><p>由于时间的关系写的很匆忙，出了问题，在写if…else语句的时候需要注意花括号的位置。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (b + c &lt; a)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"不能构成三角形\n"</span>);</span><br><span class="line">	&#123;</span><br><span class="line">	  <span class="keyword">else</span></span><br><span class="line">	  &#123;</span><br><span class="line">	   <span class="built_in">printf</span>(<span class="string">"%.3lf"</span>, S);</span><br><span class="line">	  &#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
-<p>注意到了吗？本属于 <a href="">printf</a>的花括号被else抢去了。</p>
+<p>注意到了吗？本属于 <a href>printf</a>的花括号被else抢去了。</p>
 <h2 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h2><p><strong>题目内容：</strong></p>
 <p>有一个函数：</p>
 <p><img src="https://edu-image.nosdn.127.net/4ABFEDE6F4152C0F6E492702B2AD94DE.png?imageView&thumbnail=890x0&quality=100" alt="img"></p>
