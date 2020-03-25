@@ -1,6 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2020-03-16 [作业] [第七章]</title>
+    <url>/2020/03/25/2020-03-25-homework/</url>
+    <content><![CDATA[<blockquote>
+<p>人理解迭代，神理解递归。</p>
+</blockquote>
+<p>关于递归，老师和书上讲的并不是很清楚，下面的链接可以看看，容易理解些。</p>
+<p><a href="https://blog.csdn.net/it8343/article/details/80180448" target="_blank" rel="noopener" class="LinkCard">递归</a></p>
+<h1 id="最大公约数和最小公倍数"><a href="#最大公约数和最小公倍数" class="headerlink" title="最大公约数和最小公倍数"></a>最大公约数和最小公倍数</h1><p><strong>题目内容：</strong></p>
+<p>写2个函数，分别求两个整数a、b的最大公约数hcf和最小公倍数lcd。</p>
+<p>用主函数调用这两个函数，并输出结果。</p>
+<p>注意输入输出均以空格分隔</p>
+<p><strong>输入格式:</strong>   a b</p>
+<p><strong>输出格式：</strong>hcf lcd</p>
+<p><strong>输入样例：</strong>3 4</p>
+<p><strong>输出样例：</strong>1 12</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">hcf</span><span class="params">(<span class="keyword">int</span> x ,<span class="keyword">int</span> y)</span></span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">lcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> m, n;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;m, &amp;n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d %d"</span>, hcf(m, n), lcd(m, n));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">hcf</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a, b, c, i;</span><br><span class="line">	<span class="keyword">if</span> (x &gt; y)</span><br><span class="line">	&#123;</span><br><span class="line">		a = x;</span><br><span class="line">		b = y;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		a = y;</span><br><span class="line">		b = x;</span><br><span class="line">	&#125;</span><br><span class="line">	i = a % b;</span><br><span class="line">	<span class="keyword">while</span> (i != <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		a = b;</span><br><span class="line">		b = i;</span><br><span class="line">		i = a % b;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> (b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> c;</span><br><span class="line">	c = (x * y) / hcf(x, y);</span><br><span class="line">	<span class="keyword">return</span> (c);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之前已经做过最大公约数，公倍数的题了，去我之前的<a href="https://violetwsh.com/2020/03/09/2020-03-09-homework/#more">网页</a>，检索最大公约数，拿那个代码直接改就是。不过显得又臭又长。</p>
+<h1 id="素数判断"><a href="#素数判断" class="headerlink" title="素数判断"></a>素数判断</h1><p><strong>题目内容：</strong>写一个判断素数n的函数，在主函数输入一个整数，输出是否为素数的信息</p>
+<p>注意在<code>printf</code>函数中可以使用%d来输出<code>boolean</code>（布尔）型字符，true输出1，false输出0</p>
+<p>*<em>输入格式: *</em> n</p>
+<p><strong>输出格式：</strong>0/1</p>
+<p><strong>输入样例：</strong>5</p>
+<p><strong>输出样例：</strong>1</p>
+<p>判断素数的我之前也写过直接拿过来改就是。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">prime</span><span class="params">(<span class="keyword">int</span> x)</span></span>;</span><br><span class="line">	<span class="keyword">int</span> m;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;m);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,prime(m));</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">prime</span><span class="params">(<span class="keyword">int</span> x)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i,j;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">2</span>; i &lt; x; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (x % i == <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			j = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">break</span>; <span class="comment">//注意这东西特别重要</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (i == x)</span><br><span class="line">		j = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> (j);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我并没想到要用什么方法才会用到布尔类型（_Bool）。。。之前也没见到过，想要了解的可以去下面的链接去。</p>
+<p><a href="https://blog.csdn.net/daheiantian/article/details/6241893" target="_blank" rel="noopener" class="LinkCard">C语言的布尔类型(_Bool)</a></p>
+<h1 id="格式转化"><a href="#格式转化" class="headerlink" title="格式转化"></a>格式转化</h1><p><strong>题目内容：</strong>写一个函数，输入一个数字n，要求输出n每个数字字符，但每两个数字间空一个空格，最后一个数字后无空格。</p>
+<p><strong>需要注意不能使用<code>int</code>类型来保存n</strong></p>
+<p><strong>输入格式:</strong>   ab…cd</p>
+<p><strong>输出格式：</strong>a b … c d</p>
+<p><strong>输入样例：</strong>2020</p>
+<p><strong>输出样例：</strong>2 0 2 0</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">char</span> str[<span class="number">10</span>];</span><br><span class="line">	gets(str);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%c"</span>,str[<span class="number">0</span>]);</span><br><span class="line">	<span class="keyword">for</span> ( i = <span class="number">1</span>;  ;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (str[i] == <span class="string">'\0'</span>)<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">" %c"</span>, str[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个我都懒得用函数了。。。。。。</p>
+<h1 id="勒让德多项式"><a href="#勒让德多项式" class="headerlink" title="勒让德多项式"></a>勒让德多项式</h1><p><strong>题目内容：</strong>用递归方法求n阶勒让德多项式的值，递归公式为</p>
+<p><img src="https://edu-image.nosdn.127.net/EFFB9EE45C03C93E6496C8224ABC78AE.png?imageView&thumbnail=890x0&quality=100" alt="img"></p>
+<div class="note danger"><p>注意，题给的公式是错的，后面的 <code>x</code> 统一是 <code>n</code></p>
+<p>我的代码也不能通过，感觉又是系统的锅，尝试了很多别人的代码也不行。</p></div>
+
+<p>*<em>输入格式: *</em>  x n</p>
+<p><strong>输出格式：</strong>pn(x)</p>
+<p><strong>输入样例：</strong>1 2</p>
+<p><strong>输出样例：</strong>2.50</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> a, b;</span><br><span class="line">	<span class="function"><span class="keyword">double</span> <span class="title">lrd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span></span>;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%lf %lf"</span>, &amp;a, &amp;b);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%.2lf"</span>, lrd(a, b));</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">lrd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">double</span> p;</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">0</span>)p = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">1</span>)p = x;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		p =((<span class="number">2</span> * n - <span class="number">1</span>) * x - lrd(x, n - <span class="number">1</span>) - (n - <span class="number">1</span>) * lrd(x, n - <span class="number">2</span>)) / n;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> (p);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h1><p><strong>题目内容：</strong>将十进制整数x转换为任意n进制整数（n&lt;=16）并输出结果y</p>
+<p>（用递归函数实现）</p>
+<p><strong>输入格式:</strong>x n</p>
+<p><strong>输出格式：</strong>y</p>
+<p><strong>输入样例：</strong>100 8</p>
+<p><strong>输出样例：</strong>144</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n, m, s, i, sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>, &amp;n, &amp;m);</span><br><span class="line">    s = n;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">1</span>; s != <span class="number">0</span>; i++) &#123;</span><br><span class="line">        a[i] = s % m;</span><br><span class="line">        s = s / m;</span><br><span class="line">        sum++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (i = sum; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d"</span>, a[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当然都不是我写的，我只是拿来改了一下，因为这太短了。。。比我的短太多了。</p>
+<p>链接先放出来：</p>
+<p><a href="https://blog.csdn.net/heart_leader/article/details/79868133" target="_blank" rel="noopener" class="LinkCard">将十进制数M转换为N进制数</a></p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>我最初的想法是利用 %o<code>，</code>%x  输出时直接转换的，但是，这样只能转换8进制<code>%o</code>，16进制 <code>%x</code> ,题目要求的是2-16进制，其他的进制怎么操作呢？详细的方法可以查看《计算机科学导论》数字系统部分。各种进制的转换都有详细的说明。并且之前也是学过。</p>
+<p>我只讲大概的原理，十进制转换为其他进制时，我们拿35转换为2进制举例：</p>
+<p>开始</p>
+<p>35除以2，17余1，所以2进制第一位是1；</p>
+<p>17除以2，8余1，2进制第二位为1；</p>
+<p>8除以2，4余0，二进制第三位为0；</p>
+<p>4除以2，2余0，二进制第四位为0；</p>
+<p>2除以2，1余0，二进制第五位为0；</p>
+<p>2除以1，0余1，二进制第六位为1；</p>
+<p>结束</p>
+<p>结果为100011</p>
+<p>10进制转换为其他进制很简单，原理都是一样的，不断的相除取余为0。</p>
+<img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gd6kn2100aj32bc0whatl.jpg">
+
+]]></content>
+      <categories>
+        <category>homework</category>
+      </categories>
+      <tags>
+        <tag>作业</tag>
+        <tag>C语言</tag>
+        <tag>程序设计</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Bootstrap Callout导致hexo博客.md文档标题无法正常显示的办法</title>
     <url>/2020/03/25/Title%20problem/</url>
     <content><![CDATA[<p>我在写第六单元的<a href="https://violetwsh.com/2020/03/16/2020-03-16-homework/#more">作业</a>时，内容写在了.md(markdown)文档里，出于测试的原因，使用了很多新添加的功能，导致了我的部分一级，二级，三级标题在渲染后无法正常显示。再删除Bootstrap Callout相关标签之后居然就恢复正常了。</p>
@@ -106,8 +192,8 @@
         <category>videos</category>
       </categories>
       <tags>
-        <tag>test</tag>
         <tag>个人</tag>
+        <tag>test</tag>
         <tag>video，share</tag>
       </tags>
   </entry>
