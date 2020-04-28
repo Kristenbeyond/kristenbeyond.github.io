@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>视频嵌入测试2--翁恺C语言程序设计</title>
+    <url>/2020/04/29/2020-04-29-videotest2/</url>
+    <content><![CDATA[
+
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
+    <iframe src="//player.bilibili.com/player.html?aid=15267247&bvid=BV1Bx411u7qY&cid=24849544&page=43" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>        
+</div>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>videos</category>
+      </categories>
+      <tags>
+        <tag>个人</tag>
+        <tag>test</tag>
+        <tag>video，share</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>带你认识机器学习</title>
     <url>/2020/04/29/2020-04-29-machine%20learning/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer"/>
@@ -303,10 +328,10 @@
       </tags>
   </entry>
   <entry>
-    <title>如何在电脑用cemu玩塞尔达？</title>
+    <title>如何在电脑用cemu玩塞尔达？(转载)</title>
     <url>/2020/03/15/cemu/</url>
     <content><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gcwx97e0roj31z4140qhg.jpg" alt="img"></p>
-<p><a href="https://violetwsh.com/2020/03/15/cemu/" target="_blank" rel="noopener" class="LinkCard">本文来自王世浩同学，原文click</a></p>
+<p><a href="https://violetwsh.com/2020/03/15/cemu/" target="_blank" rel="noopener" class="LinkCard">This article from Wang Shihao</a></p>
 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>自从我卖掉PS4之后我就发誓不再买游戏机——作为学生党我是真的养不起。但是很多独占游戏让我十分羡慕，比如，买塞尔达送switch主机的塞尔达。后来在一次偶然的机会知道了cemu这个willu模拟器，并且之前也听说过，塞尔达最初不是在switch上发售的，但是因为willu上实在卖的太惨，后来才移植到switch上。</p>
 <p>在新冠肺炎爆发之后，我被迫呆在家里，一天脑子抽风了然后入手一个Xbox s的手柄。</p>
 <p>后来我想，Xbox手柄+cemu模拟器+塞尔达=等于正常玩塞尔达。于是去百度贴吧看了一下之后，果真还有，从此打开了新世界的大门，后来也玩到了女神异闻录5（PS3模拟器上）。</p>

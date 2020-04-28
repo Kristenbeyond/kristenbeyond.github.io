@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ptdexww.com/"/>
-  <updated>2020-04-28T17:03:07.984Z</updated>
+  <updated>2020-04-28T17:59:00.763Z</updated>
   <id>https://ptdexww.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>视频嵌入测试2--翁恺C语言程序设计</title>
+    <link href="https://ptdexww.com/2020/04/29/2020-04-29-videotest2/"/>
+    <id>https://ptdexww.com/2020/04/29/2020-04-29-videotest2/</id>
+    <published>2020-04-28T17:22:00.000Z</published>
+    <updated>2020-04-28T17:59:00.763Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+      <category term="videos" scheme="https://ptdexww.com/categories/videos/"/>
+    
+    
+      <category term="个人" scheme="https://ptdexww.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+      <category term="test" scheme="https://ptdexww.com/tags/test/"/>
+    
+      <category term="video，share" scheme="https://ptdexww.com/tags/video%EF%BC%8Cshare/"/>
+    
+  </entry>
   
   <entry>
     <title>带你认识机器学习</title>
@@ -145,7 +176,7 @@
     <link href="https://ptdexww.com/2020/03/22/videotest/"/>
     <id>https://ptdexww.com/2020/03/22/videotest/</id>
     <published>2020-03-22T04:00:00.000Z</published>
-    <updated>2020-03-24T01:05:20.492Z</updated>
+    <updated>2020-04-28T17:32:18.485Z</updated>
     
     <summary type="html">
     
@@ -222,11 +253,11 @@
   </entry>
   
   <entry>
-    <title>如何在电脑用cemu玩塞尔达？</title>
+    <title>如何在电脑用cemu玩塞尔达？(转载)</title>
     <link href="https://ptdexww.com/2020/03/15/cemu/"/>
     <id>https://ptdexww.com/2020/03/15/cemu/</id>
     <published>2020-03-15T08:26:42.000Z</published>
-    <updated>2020-04-28T17:15:57.679Z</updated>
+    <updated>2020-04-28T17:55:47.549Z</updated>
     
     <summary type="html">
     
