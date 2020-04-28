@@ -2,16 +2,13 @@
 <search>
   <entry>
     <title>带你认识机器学习</title>
-    <url>/2020/04/29/2020-04-29-%E3%80%90%E5%B8%A6%E4%BD%A0%E8%AE%A4%E8%AF%86%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">输入密码，查看文章。</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="8e68a326ff8bf59f21f33958855102c08874a09c1f0af7f442ee8b847b6aed97">b96ef2d50a1fef70585c77a75be1699013ad02e5ced529418e24d80fd1a94005965aa66b76eb41ec1c532b1c0a0a92bc3144a3d45306ad37234119f5c1fcf785d0ff09ab5643eb9467a0373f1944c2b1debd0818c12dd9568a825b20268d748fd054eb3e90189583cbffe9b5f5b0d61c50e6ef03be9202a3003e31deeb16e3a016a11f9c8b40f1fad6b3b6576b5c3391af0ac1ff4e352284674ffa538bdda1e694b524aeb41eb6113d548d58f595af56d1736abe30880a1644576844b696c130978925a0a6d2360b82f926048fcda7dbe55c893e187069270e634795c919e0ccc70812ddf4a9ac6e45a4a8b6c635b8280646922b9a50b2bf2508a70f5fa419fd398fc477356c539d51427f19865509d1ac29f6bf20a9f1321f4a0aafbf2218f9439d6bcfb90bd0a12821f5c164252c75d30b600ba3a355a9939db145d2aa67ab762fa32c2d28cf96897e72766a65a2f4ba9ea652071a97ddfe490b2a7c6042fb44649aa7d6da0a19f74a700c148f155d98d743142f39a6a91908182906603c960914df499585ea46a3a5434b3deb3008b9810677fa511c8114e77cb3887ac88ab02ff08a7d0b48870c8074c6e4d06ee0a7bc45f39ac8a99cb5eabb7abcba7a7ee3c5acfbe96d1a7fb2d1e2f517231ef79e79bcbed519d1aab5b6b1e12c0a131a11e4ed0000c5d8beeacb2a75de94d5028f8c7e049edd01c5730d5555de2f15ef</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <url>/2020/04/29/2020-04-29-machine%20learning/</url>
+    <content><![CDATA[<blockquote>
+<p>机器学习是什么？我也不知道</p>
+</blockquote>
+<p><a href="https://www.cnblogs.com/subconscious/p/4107357.html#nine" target="_blank" rel="noopener" class="LinkCard">带你认识机器学习</a></p>
+<p>&lt;img src=”<a href="http://ww1.sinaimg.cn/large/006b3a9lgy1gd6kn2100aj32bc0whatl.jpg&quot;" target="_blank" rel="noopener">http://ww1.sinaimg.cn/large/006b3a9lgy1gd6kn2100aj32bc0whatl.jpg&quot;</a></p>
+<img src="http://ww1.sinaimg.cn/large/006AAgWQgy1ge9y1bs965j30rs0ijq3v.jpg"/>]]></content>
       <categories>
         <category>homework</category>
       </categories>
@@ -206,8 +203,8 @@
       </categories>
       <tags>
         <tag>分享</tag>
-        <tag>blog</tag>
         <tag>工具</tag>
+        <tag>blog</tag>
         <tag>加密</tag>
       </tags>
   </entry>
@@ -243,8 +240,8 @@
         <category>videos</category>
       </categories>
       <tags>
-        <tag>个人</tag>
         <tag>test</tag>
+        <tag>个人</tag>
         <tag>video，share</tag>
       </tags>
   </entry>

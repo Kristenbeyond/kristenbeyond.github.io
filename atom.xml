@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ptdexww.com/"/>
-  <updated>2020-04-28T16:27:15.403Z</updated>
+  <updated>2020-04-28T16:32:45.676Z</updated>
   <id>https://ptdexww.com/</id>
   
   <author>
@@ -18,14 +18,20 @@
   
   <entry>
     <title>带你认识机器学习</title>
-    <link href="https://ptdexww.com/2020/04/29/2020-04-29-%E3%80%90%E5%B8%A6%E4%BD%A0%E8%AE%A4%E8%AF%86%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91/"/>
-    <id>https://ptdexww.com/2020/04/29/2020-04-29-%E3%80%90%E5%B8%A6%E4%BD%A0%E8%AE%A4%E8%AF%86%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E3%80%91/</id>
+    <link href="https://ptdexww.com/2020/04/29/2020-04-29-machine%20learning/"/>
+    <id>https://ptdexww.com/2020/04/29/2020-04-29-machine%20learning/</id>
     <published>2020-04-28T16:20:42.000Z</published>
-    <updated>2020-04-28T16:27:15.403Z</updated>
+    <updated>2020-04-28T16:32:45.676Z</updated>
     
     <summary type="html">
     
-      这是一篇加密文章，内容可能是含有个人情感宣泄或者收费内容。如果你确实想观看，请Email我。
+      
+      
+        
+        
+          
+        
+      
     
     </summary>
     
@@ -126,9 +132,9 @@
     
       <category term="分享" scheme="https://ptdexww.com/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="blog" scheme="https://ptdexww.com/tags/blog/"/>
-    
       <category term="工具" scheme="https://ptdexww.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="blog" scheme="https://ptdexww.com/tags/blog/"/>
     
       <category term="加密" scheme="https://ptdexww.com/tags/%E5%8A%A0%E5%AF%86/"/>
     
@@ -151,9 +157,9 @@
       <category term="videos" scheme="https://ptdexww.com/categories/videos/"/>
     
     
-      <category term="个人" scheme="https://ptdexww.com/tags/%E4%B8%AA%E4%BA%BA/"/>
-    
       <category term="test" scheme="https://ptdexww.com/tags/test/"/>
+    
+      <category term="个人" scheme="https://ptdexww.com/tags/%E4%B8%AA%E4%BA%BA/"/>
     
       <category term="video，share" scheme="https://ptdexww.com/tags/video%EF%BC%8Cshare/"/>
     
