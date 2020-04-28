@@ -2062,7 +2062,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #62eeda;
+  background: #d56f95;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3421,7 +3421,7 @@ header {
 }
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url("/images/background.jpg");
+    background-image: url("http://ww1.sinaimg.cn/large/006AAgWQgy1ge9qz2z1brj30rs0ijgp3.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 50%;
