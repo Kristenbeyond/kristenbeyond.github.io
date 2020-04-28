@@ -8,6 +8,7 @@
 </blockquote>
 <p>关于递归，老师和书上讲的并不是很清楚，下面的链接可以看看，容易理解些。</p>
 <p><a href="https://blog.csdn.net/it8343/article/details/80180448" target="_blank" rel="noopener" class="LinkCard">递归</a></p>
+<p><a href="https://baidu.com" target="_blank" rel="noopener" class="LinkCard">haha</a></p>
 <h1 id="最大公约数和最小公倍数"><a href="#最大公约数和最小公倍数" class="headerlink" title="最大公约数和最小公倍数"></a>最大公约数和最小公倍数</h1><p><strong>题目内容：</strong></p>
 <p>写2个函数，分别求两个整数a、b的最大公约数hcf和最小公倍数lcd。</p>
 <p>用主函数调用这两个函数，并输出结果。</p>
@@ -220,8 +221,8 @@
         <category>videos</category>
       </categories>
       <tags>
-        <tag>test</tag>
         <tag>个人</tag>
+        <tag>test</tag>
         <tag>video，share</tag>
       </tags>
   </entry>

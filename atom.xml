@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ptdexww.com/"/>
-  <updated>2020-04-28T15:21:53.234Z</updated>
+  <updated>2020-04-28T15:45:03.249Z</updated>
   <id>https://ptdexww.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ptdexww.com/2020/03/25/2020-03-25-homework/"/>
     <id>https://ptdexww.com/2020/03/25/2020-03-25-homework/</id>
     <published>2020-03-25T09:26:42.000Z</published>
-    <updated>2020-04-28T15:21:53.234Z</updated>
+    <updated>2020-04-28T15:45:03.249Z</updated>
     
     <summary type="html">
     
@@ -124,9 +124,9 @@
       <category term="videos" scheme="https://ptdexww.com/categories/videos/"/>
     
     
-      <category term="test" scheme="https://ptdexww.com/tags/test/"/>
-    
       <category term="个人" scheme="https://ptdexww.com/tags/%E4%B8%AA%E4%BA%BA/"/>
+    
+      <category term="test" scheme="https://ptdexww.com/tags/test/"/>
     
       <category term="video，share" scheme="https://ptdexww.com/tags/video%EF%BC%8Cshare/"/>
     
