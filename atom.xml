@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>皮皮和托托的小窝</title>
+  <title>皮托的小窝</title>
   
   <subtitle>网站还在完善，请随便逛逛吧！</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ptdexww.com/"/>
-  <updated>2020-04-28T17:59:00.763Z</updated>
+  <updated>2020-04-29T03:24:15.174Z</updated>
   <id>https://ptdexww.com/</id>
   
   <author>
@@ -17,21 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>视频嵌入测试2--翁恺C语言程序设计</title>
+    <title>视频嵌入测试2</title>
     <link href="https://ptdexww.com/2020/04/29/2020-04-29-videotest2/"/>
     <id>https://ptdexww.com/2020/04/29/2020-04-29-videotest2/</id>
     <published>2020-04-28T17:22:00.000Z</published>
-    <updated>2020-04-28T17:59:00.763Z</updated>
+    <updated>2020-04-29T03:24:15.174Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;h1 id=&quot;视频测试2&quot;&gt;&lt;a href=&quot;#视频测试2&quot; class=&quot;headerlink&quot; title=&quot;视频测试2&quot;&gt;&lt;/a&gt;视频测试2&lt;/h1&gt;
     
     </summary>
     
