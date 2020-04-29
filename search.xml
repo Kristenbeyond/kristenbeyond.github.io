@@ -1,60 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>视频嵌入测试2</title>
-    <url>/2020/04/29/2020-04-29-videotest2/</url>
-    <content><![CDATA[<h1 id="视频测试2"><a href="#视频测试2" class="headerlink" title="视频测试2"></a>视频测试2</h1><a id="more"></a>
-
-<meta name="referrer" content="no-referrer"/>
-
-
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-    <iframe src="//player.bilibili.com/player.html?aid=15267247&bvid=BV1Bx411u7qY&cid=24849578&page=77" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
-</div>
-
-
-
-
-
-<h1 id="嵌入方法（修订后）"><a href="#嵌入方法（修订后）" class="headerlink" title="嵌入方法（修订后）"></a>嵌入方法（修订后）</h1><p>首先感谢Wang Shihao同学分享的嵌入视频方法</p>
-<p><a href="https://violetwsh.com/2020/03/22/videotest/#more" target="_blank" rel="noopener" class="LinkCard">原文点击此处</a></p>
-<p>以下是经过略微修订的版本。</p>
-<p>//打开B站相应视频的网页，点击分享，复制嵌入代码</p>
-<p>//在编辑.md文档时，插入以下代码(注意不要引用代码块)，然后替换掉相应的内容即可</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% raw %&#125;</span><br><span class="line"></span><br><span class="line">&lt;div style&#x3D;&quot;position: relative; width: 100%; height: 0; padding-bottom: 75%;&quot;&gt;</span><br><span class="line">    在此处粘贴（并去掉 &lt;&#x2F;iframe&gt;） style&#x3D;&quot;position: absolute; width: 100%; height: 100%; left: 0; top: 0;&quot;&gt; &lt;&#x2F;iframe&gt;                     &#x2F;&#x2F;来自 Wang Shihao</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">&#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>经过测试，上面代码略微存在问题 </p>
-<p>(ps：问题应当是由于Wang Shihao同学在写入代码的时候习惯性的将”&gt;”清除掉）</p>
-<p>经过上述教程嵌入的视频，会呈现以下效果</p>
-<img src="http://ww1.sinaimg.cn/large/006AAgWQgy1geagqg9qd3j30t10hve2j.jpg"/>
-
-<p>如上图所示，视频只是一小块，而并没有如同开始的示例一般</p>
-<p>为了使嵌入视频的效果与开始示例的视频相同，需对上述代码做略微修改</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在此处粘贴（并去掉 &lt;&#x2F;iframe&gt;）</span><br><span class="line">修改为</span><br><span class="line">在此处粘贴（并去掉 &gt; &lt;&#x2F;iframe&gt;）</span><br></pre></td></tr></table></figure>
-
-
-
-<p>就不用再次举例啦~</p>
-<h1 id="再一次分享视频"><a href="#再一次分享视频" class="headerlink" title="再一次分享视频"></a>再一次分享视频</h1><p>I like this video so much!</p>
-
-
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;">
-    <iframe src="//player.bilibili.com/player.html?aid=34441247&bvid=BV1Xt411R73v&cid=60334677&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"> </iframe>
-</div>
-
-
-]]></content>
-      <categories>
-        <category>videos</category>
-      </categories>
-      <tags>
-        <tag>个人</tag>
-        <tag>test</tag>
-        <tag>video，share</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>带你认识机器学习</title>
     <url>/2020/04/29/2020-04-29-machine%20learning/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer"/>
