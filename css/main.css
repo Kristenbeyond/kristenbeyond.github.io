@@ -2062,7 +2062,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bfff5b;
+  background: #9fff26;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3419,22 +3419,25 @@ header {
 .main {
   padding-bottom: 200px;
 }
-@media screen and (min-width: 1200px) {
-  body {
-    background-image: url("http://ww1.sinaimg.cn/large/006AAgWQgy1ge9qz2z1brj30rs0ijgp3.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    background-size: 100% 100%;
-  }
-  #footer a {
-    coler: #eee;
-  }
+body {
+  background: url("http://ww1.sinaimg.cn/large/006AAgWQgy1gedbflwj9ij31hc0u01kx.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+/*这是设置底部文字, 看个人需要修改*/
 }
-.main-inner {
+body #footer > div > div {
+  color: #555;
+}
+body .main-inner {
   background: #fff;
-  opacity: 0.85;
+  opacity: 0.75;
 }
-.header-inner {
+body .header-inner {
   opacity: 0.8;
 }
