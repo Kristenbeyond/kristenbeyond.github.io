@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C语言之冒泡排序法</title>
+    <url>/2020/05/01/C%20bubble%20sort/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
+
+<h1 id="冒泡排序法"><a href="#冒泡排序法" class="headerlink" title="冒泡排序法"></a>冒泡排序法</h1><p>当我们用C语言写代码时，经常会遇到需要排序的问题。面对排序问题，方法的选择很重要。</p>
+<p>今天，就来给大家讲一下C语言重要的排序方法之一 ，冒泡排序法。</p>
+<h2 id="什么是冒泡排序法"><a href="#什么是冒泡排序法" class="headerlink" title="什么是冒泡排序法"></a>什么是冒泡排序法</h2><p><strong>冒泡排序</strong>（英语：<strong>Bubble Sort</strong>）又称为<strong>泡式排序</strong>，是一种简单的<a href="https://zh.wikipedia.org/wiki/排序算法" target="_blank" rel="noopener">排序算法</a>。它重复地走访过要排序的<a href="https://zh.wikipedia.org/wiki/数列" target="_blank" rel="noopener">数列</a>，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。 (来自维基百科)</p>
+<h2 id="用冒泡排序法进行排序"><a href="#用冒泡排序法进行排序" class="headerlink" title="用冒泡排序法进行排序"></a>用冒泡排序法进行排序</h2><p>比如随机给定一个有5个元素的数组</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>我们需要把这个数组按照从小到大的顺序重新排列</p>
+<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> i,j,temp;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> n=<span class="number">5</span>;                 </span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n<span class="number">-1</span>;j++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n-j<span class="number">-1</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> ( a[i]&gt;a[i+<span class="number">1</span>] ) &#123;</span><br><span class="line">				temp=a[i];         <span class="comment">//temp作为交换数组元素a[i]和a[i+1]的中间变量</span></span><br><span class="line">				a[i]=a[i+<span class="number">1</span>];</span><br><span class="line">				a[i+<span class="number">1</span>]=temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码的”冒泡”，我们以第一个for语句的第一次循环为例，由于第一个for语句限定了j=0这个前提，在这个前提下，整个数组的<strong>最大值</strong>逐渐地“冒泡”到了数组的最后，然后该数组元素便不再发生改变。到此，第一个for语句第一次循环结束(也就是<strong>i=0</strong>的环节结束了，开始进入下一个环节，也就是<strong>i=1</strong>的环节),之后不断地循环，直至结束，原本无序的数组逐渐按照从小到大的顺序排列。</p>
+<p>其实这段代码的第二个for语句也可以写成这个样子</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(i&#x3D;0;i&lt;n-1;i++)</span><br></pre></td></tr></table></figure>
+
+<p>之所以不写成这样，是为了节省程序在运行过程中占用的内存（虽然影响微乎其微，可是作为一个合格的程序猿还是应该要注意这些“节省”的细节），加快程序的运行速度。这样写与之前的不同之处在于，原本在每一次冒泡结束的时候，冒泡到后面的相对较大的数组元素位置已经固定，不需要再参与比较，而这样的代码却多作了无意义的比较。</p>
+<p>下面我们来介绍第二种方法</p>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[5]&#x3D;&#123;3,2,4,5,1&#125;; </span><br><span class="line">	int i,j,k,temp;</span><br><span class="line">	const int n&#x3D;5;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++) &#123;</span><br><span class="line">		k&#x3D;i;</span><br><span class="line">		for(j&#x3D;i+1;j&lt;n;j++)</span><br><span class="line">		if ( a[j]&lt;a[k] ) k&#x3D;j;      &#x2F;&#x2F;k&#x3D;j  将相对较小的数组元素符号储存在k中</span><br><span class="line">		temp&#x3D;a[k];</span><br><span class="line">		a[k]&#x3D;a[i];</span><br><span class="line">		a[i]&#x3D;temp;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++)</span><br><span class="line">		printf(&quot;%d &quot;,a[i]);</span><br><span class="line">		printf(&quot;%d&quot;,a[i]); </span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个代码的“冒泡”，我们这样来解释</p>
+<p><strong>a[i]</strong>,在每一次的循环当中，都可以看作是当前仍处于<strong>“冒泡”阶段数组</strong>（所谓的“冒泡”阶段数组，不包括已经固定的数组元素）的开头数组元素，通过第二个for语句，使得最小或当前“冒泡”阶段数组中相对最小的数组元素与a[i]进行交换，这个过程就是“冒泡”的过程。经过循环，原本无序的数组便按照由小到大的顺序排列。</p>
+<p>最后的输出结果如下（虽然每个人都知道，哈哈哈）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
+
+<p>放一个我很喜欢的图吧，大家没事也要多出去踏青，看看外面绿色的世界，会更加开心喔</p>
+<img src="http://ww1.sinaimg.cn/large/006AAgWQgy1ged8bo8tc6j31hc0u01kx.jpg"/> ]]></content>
+      <categories>
+        <category>homework</category>
+      </categories>
+      <tags>
+        <tag>作业</tag>
+        <tag>C语言</tag>
+        <tag>程序设计</tag>
+        <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>带你认识机器学习</title>
     <url>/2020/04/29/2020-04-29-machine%20learning/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer"/>
@@ -103,45 +142,6 @@
 <img src="http://ww1.sinaimg.cn/large/006b3a9lgy1gd6kn2100aj32bc0whatl.jpg"/>
 
 ]]></content>
-      <categories>
-        <category>homework</category>
-      </categories>
-      <tags>
-        <tag>作业</tag>
-        <tag>C语言</tag>
-        <tag>程序设计</tag>
-        <tag>分享</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言之冒泡排序法</title>
-    <url>/2020/03/25/C%20bubble%20sort/</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer"/>
-
-<h1 id="冒泡排序法"><a href="#冒泡排序法" class="headerlink" title="冒泡排序法"></a>冒泡排序法</h1><p>当我们用C语言写代码时，经常会遇到需要排序的问题。面对排序问题，方法的选择很重要。</p>
-<p>今天，就来给大家讲一下C语言重要的排序方法之一 ，冒泡排序法。</p>
-<h2 id="什么是冒泡排序法"><a href="#什么是冒泡排序法" class="headerlink" title="什么是冒泡排序法"></a>什么是冒泡排序法</h2><p><strong>冒泡排序</strong>（英语：<strong>Bubble Sort</strong>）又称为<strong>泡式排序</strong>，是一种简单的<a href="https://zh.wikipedia.org/wiki/排序算法" target="_blank" rel="noopener">排序算法</a>。它重复地走访过要排序的<a href="https://zh.wikipedia.org/wiki/数列" target="_blank" rel="noopener">数列</a>，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。 (来自维基百科)</p>
-<h2 id="用冒泡排序法进行排序"><a href="#用冒泡排序法进行排序" class="headerlink" title="用冒泡排序法进行排序"></a>用冒泡排序法进行排序</h2><p>比如随机给定一个有5个元素的数组</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>我们需要把这个数组按照从小到大的顺序重新排列</p>
-<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a[<span class="number">5</span>]=&#123;<span class="number">3</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">1</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> i,j,temp;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> n=<span class="number">5</span>;                 </span><br><span class="line">	<span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;n<span class="number">-1</span>;j++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n-j<span class="number">-1</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> ( a[i]&gt;a[i+<span class="number">1</span>] ) &#123;</span><br><span class="line">				temp=a[i];         <span class="comment">//temp作为交换数组元素a[i]和a[i+1]的中间变量</span></span><br><span class="line">				a[i]=a[i+<span class="number">1</span>];</span><br><span class="line">				a[i+<span class="number">1</span>]=temp;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n<span class="number">-1</span>;i++)</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,a[i]);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码的”冒泡”，我们以第一个for语句的第一次循环为例，由于第一个for语句限定了j=0这个前提，在这个前提下，整个数组的<strong>最大值</strong>逐渐地“冒泡”到了数组的最后，然后该数组元素便不再发生改变。到此，第一个for语句第一次循环结束(也就是<strong>i=0</strong>的环节结束了，开始进入下一个环节，也就是<strong>i=1</strong>的环节),之后不断地循环，直至结束，原本无序的数组逐渐按照从小到大的顺序排列。</p>
-<p>其实这段代码的第二个for语句也可以写成这个样子</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">for(i&#x3D;0;i&lt;n-1;i++)</span><br></pre></td></tr></table></figure>
-
-<p>之所以不写成这样，是为了节省程序在运行过程中占用的内存（虽然影响微乎其微，可是作为一个合格的程序猿还是应该要注意这些“节省”的细节），加快程序的运行速度。这样写与之前的不同之处在于，原本在每一次冒泡结束的时候，冒泡到后面的相对较大的数组元素位置已经固定，不需要再参与比较，而这样的代码却多作了无意义的比较。</p>
-<p>下面我们来介绍第二种方法</p>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[5]&#x3D;&#123;3,2,4,5,1&#125;; </span><br><span class="line">	int i,j,k,temp;</span><br><span class="line">	const int n&#x3D;5;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++) &#123;</span><br><span class="line">		k&#x3D;i;</span><br><span class="line">		for(j&#x3D;i+1;j&lt;n;j++)</span><br><span class="line">		if ( a[j]&lt;a[k] ) k&#x3D;j;      &#x2F;&#x2F;k&#x3D;j  将相对较小的数组元素符号储存在k中</span><br><span class="line">		temp&#x3D;a[k];</span><br><span class="line">		a[k]&#x3D;a[i];</span><br><span class="line">		a[i]&#x3D;temp;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++)</span><br><span class="line">		printf(&quot;%d &quot;,a[i]);</span><br><span class="line">		printf(&quot;%d&quot;,a[i]); </span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这个代码的“冒泡”，我们这样来解释</p>
-<p><strong>a[i]</strong>,在每一次的循环当中，都可以看作是当前仍处于<strong>“冒泡”阶段数组</strong>（所谓的“冒泡”阶段数组，不包括已经固定的数组元素）的开头数组元素，通过第二个for语句，使得最小或当前“冒泡”阶段数组中相对最小的数组元素与a[i]进行交换，这个过程就是“冒泡”的过程。经过循环，原本无序的数组便按照由小到大的顺序排列。</p>
-<p>最后的输出结果如下（虽然每个人都知道，哈哈哈）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
-
-<p>放一个我很喜欢的图吧，大家没事也要多出去踏青，看看外面绿色的世界，会更加开心喔</p>
-<img src="http://ww1.sinaimg.cn/large/006AAgWQgy1ged8bo8tc6j31hc0u01kx.jpg"/> ]]></content>
       <categories>
         <category>homework</category>
       </categories>
