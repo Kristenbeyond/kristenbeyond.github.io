@@ -1,6 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python_note</title>
+    <url>/2021/03/22/Python_note/</url>
+    <content><![CDATA[<h3 id="Python类属性和实例属性的优先级"><a href="#Python类属性和实例属性的优先级" class="headerlink" title="Python类属性和实例属性的优先级"></a>Python类属性和实例属性的优先级</h3><p>可以看到，属性可以分为类属性和实例属性，那么问题就来了，如果类属性和实例属性名字相同时，会怎么样，这就涉及Python中类属性和实例属性的优先级的问题了。<br>我们可以做一个实验，在前面类定义的基础上，在实例属性中，也初始化一个localtion的属性。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span><span class="params">(object)</span>:</span></span><br><span class="line">    localtion = <span class="string">'Asia'</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age, localtion)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.localtion = localtion</span><br></pre></td></tr></table></figure>
+
+<p>接着我们初始化两个实例，并把localtion打印出来。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">dog = Animal(<span class="string">'wangwang'</span>, <span class="number">1</span>, <span class="string">'GuangDong'</span>)</span><br><span class="line">cat = Animal(<span class="string">'mimi'</span>, <span class="number">3</span>, <span class="string">'ChongQing'</span>)</span><br><span class="line">print(dog.localtion) <span class="comment"># ==&gt; GuangDong</span></span><br><span class="line">print(cat.localtion) <span class="comment"># ==&gt; ChongQing</span></span><br><span class="line">print(Animal.localtion) <span class="comment"># ==&gt; Asia</span></span><br></pre></td></tr></table></figure>
+
+<p>那通过实例，可不可以修改类属性呢？我们来尝试一下：</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">cat.localtion = <span class="string">'Africa'</span></span><br><span class="line">print(Animal.localtion) <span class="comment"># ==&gt; Asia</span></span><br></pre></td></tr></table></figure>
+
+<p>这里依然打印了Asia，可见通过实例是无法修改类的属性的，事实上，通过实例方法修改类属性，只是给实例绑定了一个对应的实例属性：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 新增的实例属性</span></span><br><span class="line">print(cat.localtion) <span class="comment"># ==&gt; Africa</span></span><br></pre></td></tr></table></figure>
+
+<p>因此，需要特别注意，尽量不要通过实例来修改类属性，否则很容易引发意想不到的错误。</p>
+<h2 id="Python中的访问限制"><a href="#Python中的访问限制" class="headerlink" title="Python中的访问限制"></a>Python中的访问限制</h2><p>并不是所有的属性都可以被外部访问的，这种不能被外部访问的属性称为私有属性。私有属性是以双下划线’__’开头的属性。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 类私有属性</span><br><span class="line">class Animal(object):</span><br><span class="line">    __localtion &#x3D; &#39;Asia&#39;</span><br><span class="line"></span><br><span class="line">print(Animal.__localtion)</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">AttributeError: type object &#39;Animal&#39; has no attribute &#39;__localtion&#39;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 实例私有属性</span><br><span class="line">class Animal(object):</span><br><span class="line">    def __init__(self, name, age, localtion):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.age &#x3D; age</span><br><span class="line">        self.__localtion &#x3D; localtion</span><br><span class="line"></span><br><span class="line">dog &#x3D; Animal(&#39;wangwang&#39;, 1, &#39;GuangDong&#39;)</span><br><span class="line">print(dog.name) # &#x3D;&#x3D;&gt; wangwang</span><br><span class="line">print(dog.age) # &#x3D;&#x3D;&gt; 1</span><br><span class="line">print(dog.__localtion)</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span><br><span class="line">AttributeError: &#39;Animal&#39; object has no attribute &#39;__localtion&#39;</span><br></pre></td></tr></table></figure>
+
+<p>在外部访问私有属性将会抛出异常，提示没有这个属性。<br>虽然私有属性无法从外部访问，但是，从类的内部是可以访问的。私有属性是为了保护类或实例属性不被外部污染而设计的。</p>
+<h2 id="Python定义实例方法"><a href="#Python定义实例方法" class="headerlink" title="Python定义实例方法"></a>Python定义实例方法</h2><p>私有属性没有办法从外部访问，只能在类的内部操作；那如果外部需要操作私有属性怎么办？这个时候可以通过定义类或者实例的方法来操作私有属性，本节课先来介绍实例方法。<br>实例的方法指的就是在类中定义的函数，实例方法的第一个参数永远都是self，self是一个引用，指向调用该方法的实例对象本身，除此以外，其他参数和普通函数是完全一样的。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person(object):</span><br><span class="line"></span><br><span class="line">    def __init__(self, name):</span><br><span class="line">        self.__name &#x3D; name</span><br><span class="line"></span><br><span class="line">    def get_name(self):</span><br><span class="line">        return self.__name</span><br></pre></td></tr></table></figure>
+
+<p>在上面的定义，<strong>name是实例的私有属性，从外部是无法访问的，而get_name(self) 就是一个实例方法，在实例方法里面是可以操作私有属性的，注意，它的第一个参数是self。</strong><br><strong>另外，</strong><strong>init</strong>(self, name)其实也可看做是一个特殊的实例方法。<br>通过定义get_name(self)方法，在外部就可以通过这个方法访问私有属性了。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">p &#x3D; Person(&#39;Alice&#39;)</span><br><span class="line">print(p.get_name()) # &#x3D;&#x3D;&gt; Alice</span><br></pre></td></tr></table></figure>
+
+<p>注意，在外部调用实例方法时，是不需要显式传递self参数的。<br>另外，通过定义实例方法来操作私有属性的这种方法是推荐的，这种数据封装的形式除了能保护内部数据一致性外，还可以简化外部调用的难度。<br>当然，实例方法并不仅仅是为私有属性服务的，我们可以把和类的实例有关的操作都抽象成实例方法，比如：打印实例的详细信息等等。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Animal(object):</span><br><span class="line">    def __init__(self, name, age, localtion):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.age &#x3D; age</span><br><span class="line">        self.localtion &#x3D; localtion</span><br><span class="line"></span><br><span class="line">    def get_info(self):</span><br><span class="line">        return &#39;name &#x3D; &#123;&#125;, age &#x3D; &#123;&#125;, localtion &#x3D; &#123;&#125;&#39;.format(self.name, self.age, self.localtion)</span><br><span class="line"></span><br><span class="line">dog &#x3D; Animal(&#39;wangwang&#39;, 1, &#39;GuangDong&#39;)</span><br><span class="line">print(dog.get_info())</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Python定义类方法"><a href="#Python定义类方法" class="headerlink" title="Python定义类方法"></a>Python定义类方法</h2><p>在上一节课，为了操作实例对象的私有属性，我们定义了实例方法；同样的，如果需要需要操作类的私有属性，则应该定义类的方法。<br>默认的，在class中定义的全部是实例方法，实例方法第一个参数 self 是实例本身。<br>要在class中定义类方法，需要这么写：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Animal(object):</span><br><span class="line">    __localtion &#x3D; &#39;Asia&#39;</span><br><span class="line">    def __init__(self, name, age):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.age &#x3D; age</span><br><span class="line"></span><br><span class="line">    @classmethod</span><br><span class="line">    def set_localtion(cls, localtion):</span><br><span class="line">        cls.__localtion &#x3D; localtion</span><br><span class="line"></span><br><span class="line">    @classmethod</span><br><span class="line">    def get_localtion(cls):</span><br><span class="line">        return cls.__localtion</span><br><span class="line"></span><br><span class="line">print(Animal.get_localtion()) # &#x3D;&#x3D;&gt; Asia</span><br><span class="line">Animal.set_localtion(&#39;Afica&#39;)</span><br><span class="line">print(Animal.get_localtion()) # &#x3D;&#x3D;&gt; Africa</span><br></pre></td></tr></table></figure>
+
+<p>和实例方法不同的是，这里有两点需要特别注意：</p>
+<ol>
+<li>类方法需要使用@classmethod来标记为类方法，否则定义的还是实例方法</li>
+<li>类方法的第一个参数将传入类本身，通常将参数名命名为 cls，上面的 cls.<strong>localtion 实际上相当于Animal.</strong>localtion。</li>
+</ol>
+<p>​    因为是在类上调用，而非实例上调用，因此类方法无法获得任何实例变量，只能获得类的引用。</p>
+<h2 id="Python判断类型"><a href="#Python判断类型" class="headerlink" title="Python判断类型"></a>Python判断类型</h2><p>随着我们学习步伐的前进，我们的程序会出现越来越多的类型，有我们自己定义的类，也有Python自有的str、list、dict等，他们的本质都是都是Python中的一种数据类型，这时有必要去判断数据的类型，通过函数isinstance()可以判断一个变量的类型。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.gender &#x3D; gender</span><br><span class="line"></span><br><span class="line">class Student(Person):</span><br><span class="line">    def __init__(self, name, gender, score):</span><br><span class="line">        super(Student, self).__init__(name, gender)</span><br><span class="line">        self.score &#x3D; score</span><br><span class="line"></span><br><span class="line">class Teacher(Person):</span><br><span class="line">    def __init__(self, name, gender, course):</span><br><span class="line">        super(Teacher, self).__init__(name, gender)</span><br><span class="line">        self.course &#x3D; course</span><br><span class="line"></span><br><span class="line">p &#x3D; Person(&#39;Tim&#39;, &#39;Male&#39;)</span><br><span class="line">s &#x3D; Student(&#39;Bob&#39;, &#39;Male&#39;, 88)</span><br><span class="line">t &#x3D; Teacher(&#39;Alice&#39;, &#39;Female&#39;, &#39;English&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>当我们拿到变量 p、s、t 时，可以使用 isinstance 判断类型：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; isinstance(p, Person)</span><br><span class="line">True # p是Person类型</span><br><span class="line">&gt;&gt;&gt; isinstance(p, Student)</span><br><span class="line">False # p不是Student类型</span><br><span class="line">&gt;&gt;&gt; isinstance(p, Teacher)</span><br><span class="line">False # p不是Teacher类型</span><br></pre></td></tr></table></figure>
+
+<p>这说明在继承链上，一个父类的实例不能是子类类型，因为子类比父类多了一些属性和方法。<br>我们再考察 s：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; isinstance(s, Person)</span><br><span class="line">True # s是Person类型</span><br><span class="line">&gt;&gt;&gt; isinstance(s, Student)</span><br><span class="line">True # s是Student类型</span><br><span class="line">&gt;&gt;&gt; isinstance(s, Teacher)</span><br><span class="line">False # s不是Teacher类型</span><br></pre></td></tr></table></figure>
+
+<p>s 是Student类型，不是Teacher类型，这很容易理解。但是，s 也是Person类型，因为Student继承自Person，虽然它比Person多了一些属性和方法，但是，把 s 看成Person的实例也是可以的。</p>
+<p>这说明在一条继承链上，一个实例可以看成它本身的类型，也可以看成它父类的类型。</p>
+<p>isinstance也可以用于Python自有数据类型的判断。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">s &#x3D; &#39;this is a string.&#39;</span><br><span class="line">n &#x3D; 10</span><br><span class="line">isinstance(s, int) # &#x3D;&#x3D;&gt; False</span><br><span class="line">isinstance(n, str) # &#x3D;&#x3D;&gt; False</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Python中的多态"><a href="#Python中的多态" class="headerlink" title="Python中的多态"></a>Python中的多态</h2><p>类具有继承关系，并且子类类型可以向上转型看做父类类型，如果我们从 Person 派生出 Student和Teacher ，并都写了一个who() 方法：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.gender &#x3D; gender</span><br><span class="line">    def who(self):</span><br><span class="line">        return &#39;I am a Person, my name is %s&#39; % self.name</span><br><span class="line"></span><br><span class="line">class Student(Person):</span><br><span class="line">    def __init__(self, name, gender, score):</span><br><span class="line">        super(Student, self).__init__(name, gender)</span><br><span class="line">        self.score &#x3D; score</span><br><span class="line">    def who(self):</span><br><span class="line">        return &#39;I am a Student, my name is %s&#39; % self.name</span><br><span class="line"></span><br><span class="line">class Teacher(Person):</span><br><span class="line">    def __init__(self, name, gender, course):</span><br><span class="line">        super(Teacher, self).__init__(name, gender)</span><br><span class="line">        self.course &#x3D; course</span><br><span class="line">    def who(self):</span><br><span class="line">        return &#39;I am a Teacher, my name is %s&#39; % self.name</span><br></pre></td></tr></table></figure>
+
+<p>接着，我们分别把不同类型的who()函数结果打印出来：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">p &#x3D; Person(&#39;Tim&#39;, &#39;Male&#39;)</span><br><span class="line">s &#x3D; Student(&#39;Bob&#39;, &#39;Male&#39;, 88)</span><br><span class="line">t &#x3D; Teacher(&#39;Alice&#39;, &#39;Female&#39;, &#39;English&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">I am a Person, my name is Tim</span><br><span class="line">I am a Student, my name is Bob</span><br><span class="line">I am a Teacher, my name is Alice</span><br></pre></td></tr></table></figure>
+
+<p>这种行为称为多态。从定义上来讲，Student和Teacher都拥有来自父类Person继承的who()方法，以及自己定义的who()方法。但是在实际调用的时候，会首先查找自身的定义，如果自身有定义，则优先使用自己定义的函数；如果没有定义，则顺着继承链向上找。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Boss(Person):</span><br><span class="line">    def __init__(self, name, gender,company):</span><br><span class="line">        super(Boss, self).__init__(name, gender)</span><br><span class="line">        self.company &#x3D; company</span><br><span class="line"></span><br><span class="line">b &#x3D; Boss(&#39;Bob&#39;, &#39;Male&#39;, &#39;Alibaba&#39;)</span><br><span class="line">b.who() # &#x3D;&#x3D;&gt; I am a Person, my name is Bob</span><br></pre></td></tr></table></figure>
+
+<p>在Boss的定义类，没有定义who方法，所以会顺着继承链向上找到父类的who方法并且调用。</p>
+<h2 id="Python中的多重继承"><a href="#Python中的多重继承" class="headerlink" title="Python中的多重继承**"></a>Python中的多重继承**</h2><p>除了从一个父类继承外，Python允许从多个父类继承，称为多重继承。多重继承和单继承没有特别大的差异，只是在括号内加入多个需要继承的类的名字即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class A(object):</span><br><span class="line">    def __init__(self, a):</span><br><span class="line">        print (&#39;init A...&#39;)</span><br><span class="line">        self.a &#x3D; a</span><br><span class="line"></span><br><span class="line">class B(A):</span><br><span class="line">    def __init__(self, a):</span><br><span class="line">        super(B, self).__init__(a)</span><br><span class="line">        print (&#39;init B...&#39;)</span><br><span class="line"></span><br><span class="line">class C(A):</span><br><span class="line">    def __init__(self, a):</span><br><span class="line">        super(C, self).__init__(a)</span><br><span class="line">        print (&#39;init C...&#39;)</span><br><span class="line"></span><br><span class="line">class D(B, C):</span><br><span class="line">    def __init__(self, a):</span><br><span class="line">        super(D, self).__init__(a)</span><br><span class="line">        print (&#39;init D...&#39;)</span><br></pre></td></tr></table></figure>
+
+<p>多重继承的继承链就不是一棵树了，它像这样：</p>
+<p><img src="https://img.mukewang.com/5f48a2020001015707580552.jpg" alt="img"></p>
+<p>从上图可知，A类被继承了两次，那么A的<strong>init</strong>()方法，是否会被调用两次呢？</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; d &#x3D; D(&#39;d&#39;)</span><br><span class="line">init A...</span><br><span class="line">init C...</span><br><span class="line">init B...</span><br><span class="line">init D...</span><br></pre></td></tr></table></figure>
+
+<p>实践证明，在多重继承里，A虽然被继承了两次，但是<strong>init</strong>()的方法只调用一次。</p>
+<p><strong>多重继承的目的是从两种继承树中分别选择并继承出子类，以便组合功能使用。</strong><br>举个例子，Python的网络服务器有TCPServer、UDPServer、UnixStreamServer、UnixDatagramServer，而服务器运行模式有 多进程ForkingMixin 和 多线程ThreadingMixin两种。<br>要创建多进程模式的 TCPServer：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class MyTCPServer(TCPServer, ForkingMixin)</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>要创建多线程模式的 UDPServer：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class MyUDPServer(UDPServer, ThreadingMixin):</span><br><span class="line">    pass</span><br></pre></td></tr></table></figure>
+
+<p>如果没有多重继承，要实现上述所有可能的组合需要 4x2=8 个子类。</p>
+<h2 id="Python类的str-和-repr方法"><a href="#Python类的str-和-repr方法" class="headerlink" title="Python类的str 和 repr方法"></a>Python类的<strong>str</strong> 和 <strong>repr</strong>方法</h2><p>对于Python的内建对象，比如int、dict、list等，通过str()方法，可以把这些对象转换为字符串对象输出。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">num &#x3D; 12</span><br><span class="line">str(num) # &#x3D;&#x3D;&gt; &#39;12&#39;</span><br><span class="line">d &#x3D; &#123;1: 1, 2: 2&#125;</span><br><span class="line">str(d) # &#x3D;&#x3D;&gt; &#39;&#123;1: 1, 2: 2&#125;&#39;</span><br><span class="line">l &#x3D; [1,2,3,4,5]</span><br><span class="line">str(l) # &#x3D;&#x3D;&gt; &#39;[1, 2, 3, 4, 5]&#39;</span><br></pre></td></tr></table></figure>
+
+<p>对于自定义对象，通过str()方法，同样可以得到对象所对应的字符串结果，只不过结果会有些难理解。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person:</span><br><span class="line">    pass</span><br><span class="line"></span><br><span class="line">bob &#x3D; Person()</span><br><span class="line">str(bob) # &#x3D;&#x3D;&gt; &#39;&lt;__main__.Person object at 0x7fc77b859c50&gt;&#39;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;<strong>main</strong>.Person object at 0x7fc77b859c50&gt;这个结果其实是Animal的实例cat在内存中的地址，这是相当难以理解的，不过引发思考的是，通过str()打印的数据，是怎么来的呢？<br>这其实是对象的内建方法<strong>str</strong>返回的。<br>通过dir()方法，我们可以把对象的所有方法打印出来。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; dir(list)</span><br><span class="line">[&#39;__add__&#39;, &#39;__class__&#39;, &#39;__contains__&#39;, &#39;__delattr__&#39;, &#39;__delitem__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__getattribute__&#39;, &#39;__getitem__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__iadd__&#39;, &#39;__imul__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__iter__&#39;, &#39;__le__&#39;, &#39;__len__&#39;, &#39;__lt__&#39;, &#39;__mul__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__reversed__&#39;, &#39;__rmul__&#39;, &#39;__setattr__&#39;, &#39;__setitem__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;, &#39;append&#39;, &#39;clear&#39;, &#39;copy&#39;, &#39;count&#39;, &#39;extend&#39;, &#39;index&#39;, &#39;insert&#39;, &#39;pop&#39;, &#39;remove&#39;, &#39;reverse&#39;, &#39;sort&#39;]</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，int、dict、list等的内建对象都实现了自己的<strong>str</strong>()方法，可以把相应的字符串返回，如果我们的类也想把容易理解的字符串输出的话，那么我们也需要实现类的<strong>str</strong>()方法。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.gender &#x3D; gender</span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &#39;name: &#123;&#125;, gender: &#123;&#125;&#39;.format(self.name, self.gender)</span><br><span class="line"></span><br><span class="line">bob &#x3D; Person(&#39;Bob&#39;, &#39;Male&#39;)</span><br><span class="line">str(bob) # &#x3D;&#x3D;&gt; &#39;name: Bob, gender: Male&#39;</span><br></pre></td></tr></table></figure>
+
+<p>但是，对于直接在终端输入变量bob，得到的依然是这样结果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; bob</span><br><span class="line">&lt;__main__.Person object at 0x7fc77b859cc0&gt;</span><br></pre></td></tr></table></figure>
+
+<p>而对于int、list等的对象，直接输入变量也可得到可读的结果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; num &#x3D; 12</span><br><span class="line">&gt;&gt;&gt; str(num)</span><br><span class="line">&#39;12&#39;</span><br><span class="line">&gt;&gt;&gt; d &#x3D; &#123;1: 1, 2: 2&#125;</span><br><span class="line">&gt;&gt;&gt; d</span><br><span class="line">&#123;1: 1, 2: 2&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><strong>str</strong>()函数似乎没有在自定义类Person中生效，这是为什么呢？</strong><br>这是因为 Python 定义了<strong>str()</strong>和<strong>repr</strong>()两种方法，<strong>str()</strong>用于显示给用户，而<strong>repr</strong>()用于显示给开发人员，当使用str()时，实际调用的是<strong>str</strong>()方法，而直接输入变量，调用的是<strong>repr</strong>()方法。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Person(object):</span><br><span class="line">    def __init__(self, name, gender):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.gender &#x3D; gender</span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &#39;name: &#123;&#125;, gender: &#123;&#125;&#39;.format(self.name, self.gender)</span><br><span class="line">    def __repr__(self):</span><br><span class="line">        return &#39;name: &#123;&#125;, gender: &#123;&#125;&#39;.format(self.name, self.gender)</span><br><span class="line"></span><br><span class="line">bob &#x3D; Person(&#39;Bob&#39;, &#39;Male&#39;)</span><br><span class="line">str(bob) # &#x3D;&#x3D;&gt; &#39;name: Bob, gender: Male&#39;</span><br><span class="line">&gt;&gt;&gt; bob</span><br><span class="line">&#39;name: Bob, gender: Male&#39;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Python类的数学运算"><a href="#Python类的数学运算" class="headerlink" title="Python类的数学运算"></a>Python类的数学运算</h2><p>事实上，Python很多的操作都是通过内建函数来实现的，比如最熟悉的加减乘除，都是通过内建函数来实现的，分别是<code>__add__</code>、<code>__sub__</code>、<code>__mul__</code>、<code>__truediv__</code>。因此，只要我们的自定义类实现了相关的内建函数，我们的类对象，也可以做到加减乘除。<br>对于有理数，我们可以使用Rational类来表示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Rational(object):</span><br><span class="line">    def __init__(self, p, q):</span><br><span class="line">        self.p &#x3D; p</span><br><span class="line">        self.q &#x3D; q</span><br></pre></td></tr></table></figure>
+
+<p>其中，p、q 都是整数，表示有理数 p/q。<br>如果要让Rational进行加法运算，需要正确实现<strong>add</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Rational(object):</span><br><span class="line">    def __init__(self, p, q):</span><br><span class="line">        self.p &#x3D; p</span><br><span class="line">        self.q &#x3D; q</span><br><span class="line">    def __add__(self, r):</span><br><span class="line">        return Rational(self.p * r.q + self.q * r.p, self.q * r.q)</span><br><span class="line">    def __str__(self):</span><br><span class="line">        return &#39;&#123;&#125;&#x2F;&#123;&#125;&#39;.format(self.p, self.q)</span><br></pre></td></tr></table></figure>
+
+<p>定义好后，就可以尝试一下有理数的加法了：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; r1 &#x3D; Rational(1, 2)</span><br><span class="line">&gt;&gt;&gt; r2 &#x3D; Rational(2, 3)</span><br><span class="line">&gt;&gt;&gt; print(r1 + r2)</span><br><span class="line">7&#x2F;6</span><br></pre></td></tr></table></figure>
+
+<p>需要注意<strong>add</strong>()函数，它有一个参数，表示的是运算的第二个操作数，比如：r1 + r2，那么在<strong>add</strong>()方法中的参数，r指的就是r2，这个参数是运算符重载的时候传递的。<br>另外，细心的同学可能注意到了，相比加减乘的特殊方法，除法的特殊方法名字较长<strong>truediv</strong>，并且含有true这样的描述，这其实和Python除法是有关系的。<br>Python的除法可以分为地板除（你没看错，就是地板）和普通除法，地板除的特殊方法是<strong>floordiv</strong>，普通除法是<strong>truediv</strong>。<br>地板除法和普通除法不一样，地板除法的结果只会向下取整数。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; num &#x3D; 5</span><br><span class="line">&gt;&gt;&gt; num.__truediv__(3)</span><br><span class="line">1.6666666666666667</span><br><span class="line">&gt;&gt;&gt; num.__floordiv__(3)</span><br><span class="line">1 # 向下取整</span><br><span class="line">&gt;&gt;&gt; num &#x3D; 7</span><br><span class="line">&gt;&gt;&gt; num.__floordiv__(3)</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p>在运算中，普通除法使用/表示，而地板除使用//表示。</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">5</span> / <span class="number">3</span></span><br><span class="line"><span class="number">1.6666666666666667</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="number">5</span> // <span class="number">3</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Python类的slots方法-限制属性的动态添加"><a href="#Python类的slots方法-限制属性的动态添加" class="headerlink" title="Python类的slots方法  //限制属性的动态添加"></a>Python类的<strong>slots</strong>方法  //限制属性的动态添加</h2><p>由于Python是动态语言，任何实例在运行期都可以动态地添加属性。比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    def __init__(self, name, gender, score):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.gender &#x3D; gender</span><br><span class="line">        self.score &#x3D; score</span><br></pre></td></tr></table></figure>
+
+<p>此时，Student类有三个属性，name、gender、score，由于是动态语言，在运行时，可以随意添加属性。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">student &#x3D; Student(&#39;Bob&#39;, &#39;Male&#39;, 99)</span><br><span class="line">student.age &#x3D; 12 # &#x3D;&#x3D;&gt; 动态添加年龄age属性</span><br></pre></td></tr></table></figure>
+
+<p>如果要限制添加的属性，例如，Student类只允许添加 name、gender和score 这3个属性，就可以利用Python的一个特殊的<strong>slots</strong>来实现。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">class Student(object):</span><br><span class="line">    __slots__ &#x3D; (&#39;name&#39;, &#39;gender&#39;, &#39;score&#39;)</span><br><span class="line">    def __init__(self, name, gender, score):</span><br><span class="line">        self.name &#x3D; name</span><br><span class="line">        self.gender &#x3D; gender</span><br><span class="line">        self.score &#x3D; score</span><br></pre></td></tr></table></figure>
+
+<p>使用<strong>slots</strong> = (‘name’, ‘gender’, ‘score’) 限定Student类的属性，这个时候在外部再次添加动态属性age，将会报错。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&gt;&gt;&gt; student &#x3D; Student(&#39;Bob&#39;, &#39;Male&#39;, 99)</span><br><span class="line">&gt;&gt;&gt; student.age &#x3D; 12 # &#x3D;&#x3D;&gt; 动态添加年龄age属性</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">AttributeError: &#39;Student&#39; object has no attribute &#39;age&#39;</span><br></pre></td></tr></table></figure>
+
+<p><strong>slots</strong>的目的是限制当前类所能拥有的属性，避免因为外部属性的操作导致类属性越来越难以管理。</p>
+<h2 id="Python读取文件"><a href="#Python读取文件" class="headerlink" title="Python读取文件"></a>Python读取文件</h2><p> <strong>读取若干字符</strong></p>
+<p>文件对象提供read()方法，可以读取文件中的若干个字符，它提供一个参数size，可以指定读取字符的数量。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">s &#x3D; f.read(5)</span><br><span class="line">print(s) # &#x3D;&#x3D;&gt; Hello</span><br></pre></td></tr></table></figure>
+
+<p>当read()之后，访问文件的游标就会移动到第六个字符前面，此时，继续read，将得到Hello后面的结果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">s &#x3D; f.read(6)</span><br><span class="line">print(s) # &#x3D;&#x3D;&gt; &#39; World&#39;</span><br></pre></td></tr></table></figure>
+
+<h3 id="读取一行"><a href="#读取一行" class="headerlink" title="读取一行"></a><strong>读取一行</strong></h3><p>文件对象提供readline()方法，和read()方法类似，可以读取文件中的若干个字符，它也提供一个参数size，可以指定读取字符的数量，不过和read()方法不同的是，readline()方法遇到一行结束的时候，就会返回。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f.close()</span><br><span class="line">f &#x3D; open(&#39;test.txt&#39;, &#39;r&#39;) # 重新打开文件</span><br><span class="line">s &#x3D; f.readline(20)</span><br><span class="line">print(s)  # &#x3D;&#x3D;&gt; &#39;Hello World.\n&#39;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，打印的内容并没有20个字符，readline最多返回一行的所有字符。</p>
+<h3 id="读取多行"><a href="#读取多行" class="headerlink" title="读取多行"></a><strong>读取多行</strong></h3><p>文件对象提供readlines()方法，可以读取多行字符，返回一个列表。它提供一个hint参数，表示指定读取的行数，没有指定则默认以列表的形式返回文件所有的字符串。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f.close()</span><br><span class="line">f.open(&#39;test.txt&#39;, &#39;r&#39;)</span><br><span class="line">s &#x3D; f.readlines()</span><br><span class="line">print(s) # &#x3D;&#x3D;&gt; [&#39;Hello World.\n&#39;, &#39;Hello Python.\n&#39;, &#39;Hello Imooc.\n&#39;]</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Python往文件追加内容"><a href="#Python往文件追加内容" class="headerlink" title="Python往文件追加内容"></a>Python往文件追加内容</h2><p>通过w的打开方式打开文件，会清空文件的内容，这在很多场景下是不合适的，比如写系统日志的时候，需要累积随时间推移的所有数据。</p>
+<p>Python提供文件追加内容的打开模式，可以往文件尾部添加内容，又不清空文件原有的内容。</p>
+<table>
+<thead>
+<tr>
+<th><strong>模式</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>a</td>
+<td>打开一个文件并追加内容，会往文件尾部添加内容</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>以二进制格式打开一个文件并追加内容，会往文件尾部添加内容</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>打开一个文件并使用追加进行读写</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f &#x3D; open(&#39;test.txt&#39;, &#39;a&#39;)</span><br><span class="line">f.write(&#39;Hello Everyone\n&#39;)</span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<p>使用a的打开方式打开文件，文件游标默认是在文件的尾部，因此，可以便捷的往文件尾部添加内容，除此以外，文件对象还提供seek()方法，可以移动文件的游标位置，它接受一个参数，表示文件的位置，0：文件首部，1：当前位置，2：文件尾部，通过seek()可以把文件游标移动到文件首部但不删除文件的内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f &#x3D; open(&#39;test.txt&#39;, &#39;a+&#39;)</span><br><span class="line">content &#x3D; f.readlines()</span><br><span class="line">print(content) # &#x3D;&#x3D;&gt; []</span><br><span class="line">f.seek(0)</span><br><span class="line">content &#x3D; f.readlines()</span><br><span class="line">print(content) # &#x3D;&#x3D;&gt; [&#39;Hello World\n&#39;, &#39;Hello Python\n&#39;, &#39;Hello Imooc\n&#39;]</span><br></pre></td></tr></table></figure>
+
+<p>第一次print(content)的时候，由于文件游标在文件的尾部，所以readlines()读取不到任何数据，打印了空的结果，第二次print(content)的时候，由于通过seek(0)，文件游标移动到了文件的首部，因此readlines()就返回了文件所有的内容。</p>
+<h2 id="Python正确关闭文件"><a href="#Python正确关闭文件" class="headerlink" title="Python正确关闭文件"></a>Python正确关闭文件</h2><p>在进行文件操作的时候，正确关闭一个文件非常重要，如果在文件读写后，没有正确关闭一个文件的话，则有可能导致文件损坏，文件内容丢失等问题。</p>
+<p>在一般情况下，我们使用文件对象的close()方法，来关闭一个文件。<br>但是，使用close()方法，也不是100%安全的，如果在close()文件之前，程序异常退出了，那么文件也得不到正确的关闭。比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">f &#x3D; open(&#39;test.txt&#39;, &#39;a+&#39;)</span><br><span class="line">exit(-1) # &#x3D;&#x3D;&gt; 模拟程序异常退出</span><br><span class="line">f.close() # &#x3D;&#x3D;&gt; close语句永远的不到执行</span><br></pre></td></tr></table></figure>
+
+<p>在实际工程中，close()文件之前，为了正确关闭文件，需要考虑各种异常情况，这是非常麻烦的一件事，Python提供with关键字，可以免除这类后顾之忧。<br>with关键字对资源进行访问的场合，会确保不管在使用过程中是否发生异常，都会执行必要的“清理”的操作，释放资源，比如文件使用后自动关闭等等。<br>with的使用方法如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">with open(&#39;test.txt&#39;, &#39;r&#39;) as f:</span><br><span class="line">    content &#x3D; f.readlines()</span><br><span class="line">    for line in content:</span><br><span class="line">        print(line)</span><br></pre></td></tr></table></figure>
+
+<p>当文件使用结束后，不需要显式的调用f.close()关闭文件。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>C语言之冒泡排序法</title>
     <url>/2020/05/01/C%20bubble%20sort/</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer"/>
@@ -20,10 +222,10 @@
 
 <p>之所以不写成这样，是为了节省程序在运行过程中占用的内存（虽然影响微乎其微，可是作为一个合格的程序猿还是应该要注意这些“节省”的细节），加快程序的运行速度。这样写与之前的不同之处在于，原本在每一次冒泡结束的时候，冒泡到后面的相对较大的数组元素位置已经固定，不需要再参与比较，而这样的代码却多作了无意义的比较。</p>
 <p>下面我们来介绍第二种方法</p>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[5]&#x3D;&#123;3,2,4,5,1&#125;; </span><br><span class="line">	int i,j,k,temp;</span><br><span class="line">	const int n&#x3D;5;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++) &#123;</span><br><span class="line">		k&#x3D;i;</span><br><span class="line">		for(j&#x3D;i+1;j&lt;n;j++)</span><br><span class="line">		if ( a[j]&lt;a[k] ) k&#x3D;j;      &#x2F;&#x2F;k&#x3D;j  将相对较小的数组元素符号储存在k中</span><br><span class="line">		temp&#x3D;a[k];</span><br><span class="line">		a[k]&#x3D;a[i];</span><br><span class="line">		a[i]&#x3D;temp;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++)</span><br><span class="line">		printf(&quot;%d &quot;,a[i]);</span><br><span class="line">		printf(&quot;%d&quot;,a[i]); </span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[5]&#x3D;&#123;3,2,4,5,1&#125;; </span><br><span class="line">	int i,j,k,temp;</span><br><span class="line">	const int n&#x3D;5;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++) &#123;</span><br><span class="line">		k&#x3D;i;</span><br><span class="line">		for(j&#x3D;i+1;j&lt;n;j++)</span><br><span class="line">		if ( a[j]&lt;a[k] ) k&#x3D;j;      &#x2F;&#x2F;k&#x3D;j  将相对较小的数组元素序号储存在k中</span><br><span class="line">		temp&#x3D;a[k];</span><br><span class="line">		a[k]&#x3D;a[i];</span><br><span class="line">		a[i]&#x3D;temp;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++)</span><br><span class="line">		printf(&quot;%d &quot;,a[i]);</span><br><span class="line">		printf(&quot;%d&quot;,a[i]); </span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这个代码的“冒泡”，我们这样来解释</p>
-<p><strong>a[i]</strong>,在每一次的循环当中，都可以看作是当前仍处于<strong>“冒泡”阶段数组</strong>（所谓的“冒泡”阶段数组，不包括已经固定的数组元素）的开头数组元素，通过第二个for语句，使得最小或当前“冒泡”阶段数组中相对最小的数组元素与a[i]进行交换，这个过程就是“冒泡”的过程。经过循环，原本无序的数组便按照由小到大的顺序排列。</p>
+<p><strong>a[i]</strong>,在每一次的循环当中，都可以看作是当前仍处于<strong>“冒泡”阶段数组</strong>（所谓的“冒泡”阶段数组，不包括已经固定的数组元素）的开头数组元素，在执行第一次外循环时i的值为0，经过比较找出5个数字中最小数字所在的元素序号为看，然后把a[k]与a[i]交换（利用临时变量temp）。在执行第二次外循环时<strong>i的值就变为了1</strong>，参加比较的就只有四个数字了。然后将这四个数字里最小的数字所在的元素与a[1]互换，其余类推。  这个过程就是“冒泡”的过程。经过循环，原本无序的数组便按照由小到大的顺序排列。</p>
 <p>最后的输出结果如下（虽然每个人都知道，哈哈哈）</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
 

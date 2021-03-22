@@ -101,8 +101,8 @@
 <meta property="og:description" content="冒泡排序法当我们用C语言写代码时，经常会遇到需要排序的问题。面对排序问题，方法的选择很重要。 今天，就来给大家讲一下C语言重要的排序方法之一 ，冒泡排序法。 什么是冒泡排序法冒泡排序（英语：Bubble Sort）又称为泡式排序，是一种简单的排序算法。它重复地走访过要排序的数列，一次比较两个元素，如果他们的顺序错误就把他们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006AAgWQgy1ged8bo8tc6j31hc0u01kx.jpg">
 <meta property="article:published_time" content="2020-05-01T12:56:42.000Z">
-<meta property="article:modified_time" content="2020-05-01T13:53:25.896Z">
-<meta property="article:author" content="Liu Yinglei">
+<meta property="article:modified_time" content="2020-05-02T02:12:00.930Z">
+<meta property="article:author" content="Liu YingLei">
 <meta property="article:tag" content="作业">
 <meta property="article:tag" content="C语言">
 <meta property="article:tag" content="程序设计">
@@ -339,7 +339,7 @@
     <link itemprop="mainEntityOfPage" href="https://ptdexww.com/2020/05/01/C%20bubble%20sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Yinglei">
+      <meta itemprop="name" content="Liu YingLei">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="http://ww1.sinaimg.cn/large/006AAgWQgy1ge9ldrxusuj30py0r4jww.jpg">
     </span>
@@ -480,10 +480,10 @@
 
 <p>之所以不写成这样，是为了节省程序在运行过程中占用的内存（虽然影响微乎其微，可是作为一个合格的程序猿还是应该要注意这些“节省”的细节），加快程序的运行速度。这样写与之前的不同之处在于，原本在每一次冒泡结束的时候，冒泡到后面的相对较大的数组元素位置已经固定，不需要再参与比较，而这样的代码却多作了无意义的比较。</p>
 <p>下面我们来介绍第二种方法</p>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[5]&#x3D;&#123;3,2,4,5,1&#125;; </span><br><span class="line">	int i,j,k,temp;</span><br><span class="line">	const int n&#x3D;5;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++) &#123;</span><br><span class="line">		k&#x3D;i;</span><br><span class="line">		for(j&#x3D;i+1;j&lt;n;j++)</span><br><span class="line">		if ( a[j]&lt;a[k] ) k&#x3D;j;      &#x2F;&#x2F;k&#x3D;j  将相对较小的数组元素符号储存在k中</span><br><span class="line">		temp&#x3D;a[k];</span><br><span class="line">		a[k]&#x3D;a[i];</span><br><span class="line">		a[i]&#x3D;temp;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++)</span><br><span class="line">		printf(&quot;%d &quot;,a[i]);</span><br><span class="line">		printf(&quot;%d&quot;,a[i]); </span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int a[5]&#x3D;&#123;3,2,4,5,1&#125;; </span><br><span class="line">	int i,j,k,temp;</span><br><span class="line">	const int n&#x3D;5;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++) &#123;</span><br><span class="line">		k&#x3D;i;</span><br><span class="line">		for(j&#x3D;i+1;j&lt;n;j++)</span><br><span class="line">		if ( a[j]&lt;a[k] ) k&#x3D;j;      &#x2F;&#x2F;k&#x3D;j  将相对较小的数组元素序号储存在k中</span><br><span class="line">		temp&#x3D;a[k];</span><br><span class="line">		a[k]&#x3D;a[i];</span><br><span class="line">		a[i]&#x3D;temp;</span><br><span class="line">	&#125;</span><br><span class="line">	for (i&#x3D;0;i&lt;n-1;i++)</span><br><span class="line">		printf(&quot;%d &quot;,a[i]);</span><br><span class="line">		printf(&quot;%d&quot;,a[i]); </span><br><span class="line"></span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这个代码的“冒泡”，我们这样来解释</p>
-<p><strong>a[i]</strong>,在每一次的循环当中，都可以看作是当前仍处于<strong>“冒泡”阶段数组</strong>（所谓的“冒泡”阶段数组，不包括已经固定的数组元素）的开头数组元素，通过第二个for语句，使得最小或当前“冒泡”阶段数组中相对最小的数组元素与a[i]进行交换，这个过程就是“冒泡”的过程。经过循环，原本无序的数组便按照由小到大的顺序排列。</p>
+<p><strong>a[i]</strong>,在每一次的循环当中，都可以看作是当前仍处于<strong>“冒泡”阶段数组</strong>（所谓的“冒泡”阶段数组，不包括已经固定的数组元素）的开头数组元素，在执行第一次外循环时i的值为0，经过比较找出5个数字中最小数字所在的元素序号为看，然后把a[k]与a[i]交换（利用临时变量temp）。在执行第二次外循环时<strong>i的值就变为了1</strong>，参加比较的就只有四个数字了。然后将这四个数字里最小的数字所在的元素与a[1]互换，其余类推。  这个过程就是“冒泡”的过程。经过循环，原本无序的数组便按照由小到大的顺序排列。</p>
 <p>最后的输出结果如下（虽然每个人都知道，哈哈哈）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 2 3 4 5</span><br></pre></td></tr></table></figure>
 
@@ -512,7 +512,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/images/wechatpublic.jpg" alt="Liu Yinglei wechat" style="width: 200px; max-width: 100%;"/>
+    <img id="wechat_subscriber_qcode" src="/images/wechatpublic.jpg" alt="Liu YingLei wechat" style="width: 200px; max-width: 100%;"/>
     <div>我的公众号</div>
 </div>
 
@@ -530,14 +530,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Liu Yinglei 微信支付"/>
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="Liu YingLei 微信支付"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="Liu Yinglei 支付宝"/>
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Liu YingLei 支付宝"/>
         <p>支付宝</p>
       </div>
     
@@ -555,7 +555,7 @@
         <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者：</strong>
-    Liu Yinglei
+    Liu YingLei
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
@@ -610,6 +610,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/03/22/Python_note/" rel="prev" title="Python_note">
+                Python_note <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -701,9 +705,9 @@
             
               <img class="site-author-image" itemprop="image"
                 src="http://ww1.sinaimg.cn/large/006AAgWQgy1ge9ldrxusuj30py0r4jww.jpg"
-                alt="Liu Yinglei" />
+                alt="Liu YingLei" />
             
-              <p class="site-author-name" itemprop="name">Liu Yinglei</p>
+              <p class="site-author-name" itemprop="name">Liu YingLei</p>
               <p class="site-description motion-element" itemprop="description">执一以为天下牧</p>
           </div>
 
@@ -716,7 +720,7 @@
              
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -830,11 +834,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2020 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Liu Yinglei</span>
+  <span class="author" itemprop="copyrightHolder">Liu YingLei</span>
 
   
 </div>

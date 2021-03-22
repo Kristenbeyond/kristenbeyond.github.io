@@ -6,22 +6,45 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ptdexww.com/"/>
-  <updated>2020-05-01T13:53:25.896Z</updated>
+  <updated>2021-03-22T15:03:11.940Z</updated>
   <id>https://ptdexww.com/</id>
   
   <author>
-    <name>Liu Yinglei</name>
+    <name>Liu YingLei</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python_note</title>
+    <link href="https://ptdexww.com/2021/03/22/Python_note/"/>
+    <id>https://ptdexww.com/2021/03/22/Python_note/</id>
+    <published>2021-03-22T15:04:24.203Z</published>
+    <updated>2021-03-22T15:03:11.940Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>C语言之冒泡排序法</title>
     <link href="https://ptdexww.com/2020/05/01/C%20bubble%20sort/"/>
     <id>https://ptdexww.com/2020/05/01/C%20bubble%20sort/</id>
     <published>2020-05-01T12:56:42.000Z</published>
-    <updated>2020-05-01T13:53:25.896Z</updated>
+    <updated>2020-05-02T02:12:00.930Z</updated>
     
     <summary type="html">
     
